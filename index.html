@@ -163,6 +163,13 @@
     footer { padding: 30px 0 68px; border-top: 1px solid var(--line); font-family: Arial, sans-serif; font-size: 12px; color: var(--muted); }
     .footer-row { display: flex; justify-content: space-between; align-items: center; gap: 20px; }
     .footer-row a { color: var(--red); font-weight: bold; }
+    .quickbar { position: sticky; top: 0; z-index: 20; background: rgba(249,252,255,.96); border-bottom: 1px solid var(--line); box-shadow: 0 6px 16px rgba(8,41,79,.08); backdrop-filter: blur(10px); }
+    .quickbar-inner { display: flex; align-items: center; gap: 9px; min-height: 54px; overflow-x: auto; scrollbar-width: thin; }
+    .quickbar-label { flex: 0 0 auto; margin-right: 5px; color: var(--red); font-family: Arial, sans-serif; font-size: 10px; font-weight: 900; letter-spacing: .13em; text-transform: uppercase; }
+    .quickbar a { flex: 0 0 auto; padding: 8px 12px; border: 1px solid rgba(8,41,79,.18); border-radius: 999px; background: #eaf5fd; color: var(--ink); font-family: Arial, sans-serif; font-size: 11px; font-weight: 800; text-decoration: none; white-space: nowrap; }
+    .quickbar a:hover { background: var(--gold-light); border-color: var(--red); }
+    .quickbar a.live { background: var(--ink); color: var(--cream); border-color: var(--ink); }
+    .quickbar a.whatsapp { background: #e7f8ef; color: #176d40; border-color: #9ad7b5; }
     .visitor-counter { display: inline-flex; align-items: center; gap: 10px; color: var(--muted); text-decoration: none; }
     .visitor-counter img { display: block; max-width: 100%; height: auto; border: 0; }
     .visitor-counter:hover { opacity: .86; }
@@ -170,6 +177,8 @@
       .wrap { width: min(100% - 28px, 1120px); }
       header { padding-top: 18px; }
       nav { display: none; }
+      .quickbar-label { display: none; }
+      .quickbar-inner { min-height: 50px; }
       .hero { padding: 58px 0 55px; }
       .hero-grid { grid-template-columns: 1fr; gap: 42px; }
       .radio-panel { max-width: 420px; width: 100%; margin: 0 auto; transform: rotate(1deg); }
@@ -200,6 +209,18 @@
       </nav>
     </div>
   </header>
+
+  <div class="quickbar" aria-label="Acesso rápido aos serviços do site">
+    <div class="wrap quickbar-inner">
+      <span class="quickbar-label">Acesso rápido</span>
+      <a class="live" href="#ao-vivo">▶ Ouvir ao vivo</a>
+      <a href="#participar">✉ Mandar recado</a>
+      <a class="whatsapp" href="https://wa.me/5521972370937" target="_blank" rel="noopener">☏ WhatsApp da rádio</a>
+      <a href="#noticias">▣ Notícias</a>
+      <a href="#patrocinadores">★ Patrocinadores</a>
+      <a href="https://wa.me/?text=Confira%20o%20Programa%20Clube%20do%20Rei%20Teres%C3%B3polis%20na%20Ter%C3%AA%20FM%2093%2C7%3A%20https%3A%2F%2Frafaelaelabras-sudo.github.io%2Fprograma-clube-do-rei%2F" target="_blank" rel="noopener">↗ Compartilhar</a>
+    </div>
+  </div>
 
   <main>
     <section class="hero" id="inicio">
