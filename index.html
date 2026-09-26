@@ -153,6 +153,17 @@
     .curiosity-card p { color: var(--muted); font-size: 17px; }
     .curiosity-sources { margin-top: 23px; padding-top: 15px; border-top: 1px solid var(--line); font-family: Arial, sans-serif; font-size: 12px; }
     .curiosity-sources a { color: var(--red); font-weight: 800; }
+    .raffle-section { background: linear-gradient(135deg, #e9f4fc, #dcecf8); }
+    .raffle-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; margin-top: 28px; }
+    .raffle-card { padding: 25px; background: var(--cream); border: 1px solid var(--line); border-top: 5px solid var(--red); box-shadow: var(--shadow); }
+    .raffle-card .tag { color: var(--red); font-family: Arial, sans-serif; font-size: 11px; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; }
+    .raffle-card h3 { margin: 12px 0; font-size: 25px; line-height: 1.08; }
+    .raffle-card p, .raffle-card li { color: var(--muted); font-size: 16px; }
+    .raffle-card ul { padding-left: 20px; }
+    .raffle-card li + li { margin-top: 8px; }
+    .raffle-cta { margin-top: 28px; padding: 25px; background: var(--ink); color: var(--cream); }
+    .raffle-cta p { margin: 0 0 16px; color: #d3e7f5; font-size: 17px; }
+    .raffle-note { margin: 12px 0 0; color: var(--muted); font-family: Arial, sans-serif; font-size: 12px; }
     .sponsor-section { background: #dcecf8; }
     .sponsor-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 12px; margin-top: 30px; }
     .sponsor-card { min-height: 145px; display: flex; flex-direction: column; justify-content: space-between; padding: 17px; background: rgba(249,252,255,.82); border: 1px solid rgba(8,41,79,.16); box-shadow: 5px 5px 0 rgba(23,105,170,.16); color: var(--ink); text-decoration: none; transition: transform .15s ease, box-shadow .15s ease; }
@@ -189,7 +200,7 @@
       .hero-grid { grid-template-columns: 1fr; gap: 42px; }
       .radio-panel { max-width: 420px; width: 100%; margin: 0 auto; transform: rotate(1deg); }
       .hero:after { font-size: 170px; right: -12%; top: 40px; }
-      .live-grid, .message, .news-grid, .crew { grid-template-columns: 1fr; }
+      .live-grid, .message, .news-grid, .crew, .raffle-grid { grid-template-columns: 1fr; }
       .sponsor-grid { grid-template-columns: repeat(2, 1fr); }
       .sponsor-cta { flex-direction: column; align-items: flex-start; }
       .reasons { grid-template-columns: 1fr; }
@@ -211,6 +222,7 @@
         <a href="#ao-vivo">Ao vivo</a>
         <a href="#noticias">Notícias</a>
         <a href="#curiosidades">Curiosidades</a>
+        <a href="#sorteio">Sorteio</a>
         <a href="#patrocinadores">Patrocinadores</a>
         <a href="#participar">Participar</a>
       </nav>
@@ -222,6 +234,7 @@
       <span class="quickbar-label">Acesso rápido</span>
       <a class="live" href="#ao-vivo">▶ Ouvir ao vivo</a>
       <a href="#participar">✉ Mandar recado</a>
+      <a class="live" href="#sorteio">🎁 Sorteio deste Domingo</a>
       <a class="whatsapp" href="https://wa.me/5521972370937" target="_blank" rel="noopener">☏ WhatsApp da rádio</a>
       <a href="https://www.robertocarlos.com/agenda/" target="_blank" rel="noopener">♛ Agenda do Rei</a>
       <a href="#equipe">♙ Equipe e fotos</a>
@@ -335,6 +348,34 @@
           <p>Em setembro de 2021, Dudu faleceu aos 52 anos, após enfrentar um câncer. Em uma das últimas conversas com o pai, contou que gostaria de ser sepultado com uma camisa do Corinthians, roupa confortável e tênis. Segundo relato do assessor do cantor publicado na época, Roberto fez questão de atender ao pedido — uma lembrança comovente do carinho entre pai e filho.</p>
           <div class="curiosity-sources">Fontes: <a href="https://oglobo.globo.com/cultura/nos-80-anos-de-roberto-carlos-15-curiosidades-sobre-cantor-24974420" target="_blank" rel="noopener">O Globo — Os herdeiros ↗</a> · <a href="https://oglobo.globo.com/cultura/roberto-carlos-realizou-ultimo-desejo-do-filho-dudu-braga-que-morreu-de-cancer-25191858" target="_blank" rel="noopener">O Globo — O último desejo de Dudu ↗</a></div>
         </article>
+      </div>
+    </section>
+
+    <section class="section raffle-section" id="sorteio">
+      <div class="wrap">
+        <div class="eyebrow">Participe e concorra</div>
+        <h2 class="section-title">Sorteio deste Domingo</h2>
+        <p class="section-intro">Domingo, 27/09/2026 • Mande seu nome completo, telefone e bairro para concorrer aos brindes.</p>
+        <div class="raffle-grid">
+          <article class="raffle-card">
+            <span class="tag">Prêmio • Doces Húngaros</span>
+            <h3>Uma delícia para acompanhar o seu café</h3>
+            <ul>
+              <li>03 empadas de frango + 01 café expresso; ou</li>
+              <li>03 mil-folhas de creme + 01 café expresso.</li>
+            </ul>
+          </article>
+          <article class="raffle-card">
+            <span class="tag">Prêmio • Restaurante e Pizzaria Olício's</span>
+            <h3>Pizza para dividir e aproveitar</h3>
+            <p>01 pizza de 40 cm — calabresa, frango com catupiry, portuguesa ou mussarela — + 01 Guaraná de 2 litros.</p>
+          </article>
+        </div>
+        <div class="raffle-cta">
+          <p>Estamos esperando a sua participação! O resultado vai ao ar no finalzinho do programa.</p>
+          <a class="button whatsapp" href="https://wa.me/5521967861216?text=Ol%C3%A1%2C%20Clube%20do%20Rei%21%20Quero%20participar%20do%20Sorteio%20deste%20Domingo%2C%2027%2F09%2F2026.%0ANome%20completo%3A%20%0ATelefone%3A%20%0ABairro%3A%20" target="_blank" rel="noopener">Enviar meus dados pelo WhatsApp ↗</a>
+          <p class="raffle-note">O botão abre uma mensagem pronta para a produção. Confira seus dados e confirme o envio no WhatsApp.</p>
+        </div>
       </div>
     </section>
 
