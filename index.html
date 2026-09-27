@@ -55,6 +55,11 @@
     }
     .brand-name { font-size: 15px; letter-spacing: .15em; font-weight: bold; text-transform: uppercase; }
     .brand-sub { display: block; color: var(--red); font-size: 12px; letter-spacing: .08em; margin-top: 2px; }
+    .site-clock { min-width: 190px; padding: 8px 12px; border: 1px solid var(--line); background: rgba(249,252,255,.84); text-align: right; }
+    .site-clock-label { display: block; color: var(--red); font-family: Arial, sans-serif; font-size: 9px; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; }
+    .site-clock-reading { display: flex; justify-content: flex-end; align-items: center; gap: 7px; color: var(--ink); font-family: Arial, sans-serif; font-size: 20px; font-weight: 800; line-height: 1.15; font-variant-numeric: tabular-nums; }
+    .site-clock-icon { color: var(--red); font-size: 18px; }
+    .site-clock-date { display: block; margin-top: 2px; color: var(--muted); font-family: Arial, sans-serif; font-size: 10px; line-height: 1.2; }
     nav { display: flex; gap: 22px; font-size: 14px; }
     nav a { text-decoration: none; font-weight: bold; }
     nav a:hover { color: var(--red); }
@@ -209,6 +214,10 @@
     @media (max-width: 760px) {
       .wrap { width: min(100% - 28px, 1120px); }
       header { padding-top: 18px; }
+      .nav { gap: 10px; }
+      .site-clock { min-width: 160px; padding: 7px 9px; }
+      .site-clock-reading { font-size: 18px; }
+      .site-clock-date { font-size: 9px; }
       nav { display: none; }
       .quickbar-label { display: none; }
       .quickbar-inner { min-height: 50px; }
@@ -224,6 +233,10 @@
       .live-card, .info-card { padding: 25px; }
       .footer-row { flex-direction: column; }
     }
+    @media (max-width: 430px) {
+      .nav { flex-wrap: wrap; }
+      .site-clock { margin-left: auto; }
+    }
   </style>
 </head>
 <body>
@@ -234,6 +247,14 @@
         <span class="brand-mark">♛</span>
         <span><span class="brand-name">Programa Clube do Rei</span><span class="brand-sub">Teresópolis • Terê FM</span></span>
       </a>
+      <div class="site-clock" aria-label="Horário e data atuais em Teresópolis">
+        <span class="site-clock-label">TERESÓPOLIS • RJ</span>
+        <div class="site-clock-reading">
+          <span class="site-clock-icon" aria-hidden="true">🕒</span>
+          <time id="site-clock-time">--:--</time>
+        </div>
+        <time class="site-clock-date" id="site-clock-date">Carregando data…</time>
+      </div>
     </div>
   </header>
 
@@ -486,6 +507,22 @@
   </footer>
   <script>
     (() => {
+      const clockTime = document.getElementById('site-clock-time');
+      const clockDate = document.getElementById('site-clock-date');
+      const saoPauloTimeZone = 'America/Sao_Paulo';
+      if (clockTime && clockDate) {
+        const updateClock = () => {
+          const now = new Date();
+          clockTime.textContent = new Intl.DateTimeFormat('pt-BR', {
+            timeZone: saoPauloTimeZone, hour: '2-digit', minute: '2-digit', hourCycle: 'h23'
+          }).format(now);
+          clockDate.textContent = new Intl.DateTimeFormat('pt-BR', {
+            timeZone: saoPauloTimeZone, weekday: 'long', day: '2-digit', month: 'long', year: 'numeric'
+          }).format(now);
+        };
+        updateClock();
+        window.setInterval(updateClock, 30000);
+      }
       const menu = document.querySelector('.quickmenu');
       if (!menu) return;
       menu.addEventListener('click', (event) => {
