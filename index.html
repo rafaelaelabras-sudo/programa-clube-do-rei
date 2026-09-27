@@ -176,11 +176,11 @@
     .raffle-card h3 { margin: 12px 0; font-size: 25px; line-height: 1.08; }
     .raffle-card p, .raffle-card li { color: var(--muted); font-size: 16px; }
     .raffle-card ul { padding-left: 20px; }
-    .raffle-card li + li { margin-top: 8px; }
+    .raffle-card li + li { margin-top: 8px; } .raffle-winners { margin-top: 18px; padding-top: 16px; border-top: 1px solid var(--line); } .raffle-winners .winner-card + .winner-card { margin-top: 12px; }
     .raffle-cta { margin-top: 28px; padding: 25px; background: var(--ink); color: var(--cream); }
     .raffle-cta p { margin: 0 0 16px; color: #d3e7f5; font-size: 17px; }
     .raffle-note { margin: 12px 0 0; color: var(--muted); font-family: Arial, sans-serif; font-size: 12px; }
-    .winners-panel { margin-top: 28px; padding: 25px; background: var(--cream); border: 1px solid var(--line); border-top: 5px solid var(--red); box-shadow: var(--shadow); }
+    .winners-panel { display: none; margin-top: 28px; padding: 25px; background: var(--cream); border: 1px solid var(--line); border-top: 5px solid var(--red); box-shadow: var(--shadow); }
     .winners-title { margin: 8px 0 20px; font-size: clamp(25px, 4vw, 34px); line-height: 1.05; }
     .winners-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
     .winner-card { padding: 18px; background: #eaf3fb; border: 1px solid var(--line); }
@@ -418,8 +418,8 @@
     <section class="section raffle-section" id="sorteio">
       <div class="wrap">
         <div class="eyebrow">Participe e concorra</div>
-        <h2 class="section-title">Sorteio deste Domingo</h2>
-        <p class="section-intro">Domingo, 27/09/2026 • Mande seu nome completo, telefone e bairro para concorrer aos brindes.</p>
+        <h2 class="section-title">Brindes da semana e ganhadoras</h2>
+        <p class="section-intro">Domingo, 27/09/2026 • Veja cada brinde junto de quem ganhou.</p>
         <div class="raffle-grid">
           <article class="raffle-card">
             <span class="tag">Prêmio • Doces Húngaros</span>
@@ -427,12 +427,12 @@
             <ul>
               <li>03 deliciosas empadas de frango + 01 super café expresso; ou</li>
               <li>03 unidades do fabuloso mil-folhas de creme + 01 super café expresso.</li>
-            </ul>
+            </ul><div class="raffle-winners"><span class="tag">Ganhadoras da semana</span><article class="winner-card"><span class="tag">Brinde 1</span><h4>03 mil-folhas de creme + 01 super café expresso</h4><p class="winner-name">Ganhadora: Simone de Oliveira Cunha</p><p>Bomsucesso • Telefone final: 0452</p></article><article class="winner-card"><span class="tag">Brinde 2</span><h4>03 empadas de frango + 01 super café expresso</h4><p class="winner-name">Ganhadora: Edneia Aparecida Coelho Silva</p><p>Albuquerque • Telefone final: 5285</p></article></div>
           </article>
           <article class="raffle-card">
             <span class="tag">Prêmio • Restaurante e Pizzaria Olício's</span>
             <h3>Pizza para dividir e aproveitar</h3>
-            <p>01 pizza de 40 cm — calabresa, frango com catupiry, portuguesa ou mussarela — + 01 Guaraná de 2 litros.</p>
+            <p>01 pizza de 40 cm — calabresa, frango com catupiry, portuguesa ou mussarela — + 01 Guaraná de 2 litros.</p><div class="raffle-winners"><span class="tag">Ganhadora da semana</span><article class="winner-card"><p class="winner-name">Lenir Maia de Andrade</p><p>Meudom • Telefone final: 9182</p></article></div>
           </article>
         </div>
         <div class="raffle-cta">
