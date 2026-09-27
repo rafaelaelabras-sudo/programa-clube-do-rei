@@ -180,6 +180,16 @@
     .raffle-cta { margin-top: 28px; padding: 25px; background: var(--ink); color: var(--cream); }
     .raffle-cta p { margin: 0 0 16px; color: #d3e7f5; font-size: 17px; }
     .raffle-note { margin: 12px 0 0; color: var(--muted); font-family: Arial, sans-serif; font-size: 12px; }
+    .winners-panel { margin-top: 28px; padding: 25px; background: var(--cream); border: 1px solid var(--line); border-top: 5px solid var(--red); box-shadow: var(--shadow); }
+    .winners-title { margin: 8px 0 20px; font-size: clamp(25px, 4vw, 34px); line-height: 1.05; }
+    .winners-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+    .winner-card { padding: 18px; background: #eaf3fb; border: 1px solid var(--line); }
+    .winner-card .tag { color: var(--red); font-family: Arial, sans-serif; font-size: 10px; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; }
+    .winner-card h4 { margin: 10px 0 14px; font-size: 19px; line-height: 1.12; }
+    .winner-card p { margin: 8px 0 0; color: var(--muted); font-size: 14px; }
+    .winner-card .winner-name { color: var(--ink); font-weight: bold; font-size: 16px; }
+    .winner-card .winner-phone { font-family: Arial, sans-serif; font-size: 12px; }
+    .winners-congrats { margin: 0 0 18px; color: var(--muted); font-size: 16px; }
     .sponsor-section { background: #dcecf8; }
     .sponsor-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 12px; margin-top: 30px; }
     .sponsor-card { min-height: 145px; display: flex; flex-direction: column; justify-content: space-between; padding: 17px; background: rgba(249,252,255,.82); border: 1px solid rgba(8,41,79,.16); box-shadow: 5px 5px 0 rgba(23,105,170,.16); color: var(--ink); text-decoration: none; transition: transform .15s ease, box-shadow .15s ease; }
@@ -225,7 +235,7 @@
       .hero-grid { grid-template-columns: 1fr; gap: 42px; }
       .radio-panel { max-width: 420px; width: 100%; margin: 0 auto; transform: rotate(1deg); }
       .hero:after { font-size: 170px; right: -12%; top: 40px; }
-      .live-grid, .message, .news-grid, .crew, .raffle-grid, .video-showcase { grid-template-columns: 1fr; }
+      .live-grid, .message, .news-grid, .crew, .raffle-grid, .video-showcase, .winners-grid { grid-template-columns: 1fr; }
       .sponsor-grid { grid-template-columns: repeat(2, 1fr); }
       .sponsor-cta { flex-direction: column; align-items: flex-start; }
       .reasons { grid-template-columns: 1fr; }
@@ -429,6 +439,34 @@
           <p>Estamos esperando a sua participação! O resultado vai ao ar no finalzinho do programa.</p>
           <a class="button whatsapp" href="https://wa.me/5521967861216?text=Ol%C3%A1%2C%20Clube%20do%20Rei%21%20Quero%20participar%20do%20Sorteio%20deste%20Domingo%2C%2027%2F09%2F2026.%0ANome%20completo%3A%20%0ATelefone%3A%20%0ABairro%3A%20" target="_blank" rel="noopener">Enviar meus dados pelo WhatsApp ↗</a>
           <p class="raffle-note">O botão abre uma mensagem pronta para a produção. Confira seus dados e confirme o envio no WhatsApp.</p>
+        </div>
+        <div class="winners-panel" aria-labelledby="winners-title">
+          <div class="eyebrow">Resultado do sorteio</div>
+          <h3 class="winners-title" id="winners-title">Ganhadores do sorteio Clube do Rei de 27/09/26</h3>
+          <p class="winners-congrats">Parabéns às ganhadoras e muito obrigado a todos que participaram!</p>
+          <div class="winners-grid">
+            <article class="winner-card">
+              <span class="tag">Doces Húngaros</span>
+              <h4>01 MIL-FOLHAS DE CREME + 01 SUPER CAFÉ EXPRESSO</h4>
+              <p class="winner-name">Simone de Oliveira Cunha</p>
+              <p>Bomsucesso</p>
+              <p class="winner-phone">Telefone final: #####0452</p>
+            </article>
+            <article class="winner-card">
+              <span class="tag">Doces Húngaros</span>
+              <h4>03 MARAVILHOSAS EMPADAS DE FRANGO + 01 SUPER CAFÉ EXPRESSO</h4>
+              <p class="winner-name">Edneia Aparecida Coelho Silva</p>
+              <p>Albuquerque</p>
+              <p class="winner-phone">Telefone final: #####5285</p>
+            </article>
+            <article class="winner-card">
+              <span class="tag">Restaurante e Pizzaria Olício's</span>
+              <h4>01 PIZZA DE 40CM + 01 GUARANÁ DE 2 LITROS</h4>
+              <p class="winner-name">Lenir Maia de Andrade</p>
+              <p>Meudom</p>
+              <p class="winner-phone">Telefone final: #####9182</p>
+            </article>
+          </div>
         </div>
       </div>
     </section>
