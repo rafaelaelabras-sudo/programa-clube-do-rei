@@ -148,6 +148,16 @@
     .news-card a { margin-top: auto; color: var(--red); font-family: Arial, sans-serif; font-size: 12px; font-weight: 800; letter-spacing: .05em; text-decoration: none; text-transform: uppercase; }
     .news-card a:hover { text-decoration: underline; }
     .source-note { margin-top: 22px; color: var(--muted); font-family: Arial, sans-serif; font-size: 12px; }
+    .video-section { background: linear-gradient(135deg, #f9fcff, #e3f1fb); }
+    .video-showcase { display: grid; grid-template-columns: 1.15fr .85fr; gap: 20px; align-items: stretch; margin-top: 30px; }
+    .video-placeholder { min-height: 290px; display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 13px; padding: 28px; background: linear-gradient(135deg, #08294f, #1769aa); border: 1px solid rgba(8,41,79,.25); box-shadow: var(--shadow); color: var(--cream); text-align: center; }
+    .video-play { width: 68px; height: 68px; display: grid; place-items: center; padding-left: 4px; border: 2px solid #bfe9ff; border-radius: 50%; color: #bfe9ff; font-family: Arial, sans-serif; font-size: 26px; }
+    .video-placeholder strong { color: #bfe9ff; font-family: Arial, sans-serif; font-size: 12px; letter-spacing: .14em; text-transform: uppercase; }
+    .video-placeholder span:last-child { color: #e7f5ff; font-size: 16px; }
+    .video-description { display: flex; flex-direction: column; justify-content: center; padding: 28px; background: var(--cream); border: 1px solid var(--line); box-shadow: var(--shadow); }
+    .video-description .tag { color: var(--red); font-family: Arial, sans-serif; font-size: 11px; font-weight: 800; letter-spacing: .13em; text-transform: uppercase; }
+    .video-description h3 { margin: 15px 0 10px; font-size: 29px; line-height: 1.08; }
+    .video-description p { margin: 0; color: var(--muted); font-size: 16px; }
     .curiosity-section { background: #f2f8fd; }
     .curiosity-card { max-width: 880px; padding: 30px; background: var(--cream); border: 1px solid var(--line); border-left: 6px solid var(--red); box-shadow: var(--shadow); }
     .curiosity-card h3 { margin: 0 0 18px; font-size: clamp(25px, 4vw, 34px); line-height: 1.08; }
@@ -206,7 +216,7 @@
       .hero-grid { grid-template-columns: 1fr; gap: 42px; }
       .radio-panel { max-width: 420px; width: 100%; margin: 0 auto; transform: rotate(1deg); }
       .hero:after { font-size: 170px; right: -12%; top: 40px; }
-      .live-grid, .message, .news-grid, .crew, .raffle-grid { grid-template-columns: 1fr; }
+      .live-grid, .message, .news-grid, .crew, .raffle-grid, .video-showcase { grid-template-columns: 1fr; }
       .sponsor-grid { grid-template-columns: repeat(2, 1fr); }
       .sponsor-cta { flex-direction: column; align-items: flex-start; }
       .reasons { grid-template-columns: 1fr; }
@@ -240,6 +250,7 @@
           <a href="https://www.robertocarlos.com/agenda/" target="_blank" rel="noopener">♛ Agenda do Rei</a>
           <a href="#equipe">♙ Equipe e fotos</a>
           <a href="#noticias">▣ Notícias</a>
+          <a href="#videos">▶ Vídeos do programa</a>
           <a href="#curiosidades">✦ Curiosidades do Rei</a>
           <a href="#patrocinadores">★ Patrocinadores e anúncios</a>
           <a href="https://wa.me/?text=Confira%20o%20Programa%20Clube%20do%20Rei%20Teres%C3%B3polis%20na%20Ter%C3%AA%20FM%2093%2C7%3A%20https%3A%2F%2Fclubedoreiteresopolis.com.br%2F" target="_blank" rel="noopener">↗ Compartilhar o site</a>
@@ -336,6 +347,26 @@
           </article>
         </div>
         <p class="source-note">As chamadas levam para os sites oficiais ou veículos responsáveis pelas publicações.</p>
+      </div>
+    </section>
+
+    <section class="section video-section" id="videos">
+      <div class="wrap">
+        <div class="eyebrow">Clube do Rei em vídeo</div>
+        <h2 class="section-title">Vídeos do programa.</h2>
+        <p class="section-intro">Reveja momentos no ar, participações especiais e registros da equipe do Clube do Rei.</p>
+        <div class="video-showcase">
+          <div class="video-placeholder" role="status" aria-label="Os vídeos do programa serão publicados aqui em breve">
+            <span class="video-play" aria-hidden="true">▶</span>
+            <strong>Em breve</strong>
+            <span>Os momentos do Clube do Rei aparecerão aqui.</span>
+          </div>
+          <article class="video-description">
+            <span class="tag">Clube do Rei • Terê FM 93,7</span>
+            <h3>A emoção do programa, também em vídeo</h3>
+            <p>Este espaço vai reunir entrevistas, participações e trechos especiais do programa no ar.</p>
+          </article>
+        </div>
       </div>
     </section>
 
