@@ -150,14 +150,14 @@
     .source-note { margin-top: 22px; color: var(--muted); font-family: Arial, sans-serif; font-size: 12px; }
     .video-section { background: linear-gradient(135deg, #f9fcff, #e3f1fb); }
     .video-showcase { display: grid; grid-template-columns: 1.15fr .85fr; gap: 20px; align-items: stretch; margin-top: 30px; }
-    .video-placeholder { min-height: 290px; display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 13px; padding: 28px; background: linear-gradient(135deg, #08294f, #1769aa); border: 1px solid rgba(8,41,79,.25); box-shadow: var(--shadow); color: var(--cream); text-align: center; }
-    .video-play { width: 68px; height: 68px; display: grid; place-items: center; padding-left: 4px; border: 2px solid #bfe9ff; border-radius: 50%; color: #bfe9ff; font-family: Arial, sans-serif; font-size: 26px; }
-    .video-placeholder strong { color: #bfe9ff; font-family: Arial, sans-serif; font-size: 12px; letter-spacing: .14em; text-transform: uppercase; }
-    .video-placeholder span:last-child { color: #e7f5ff; font-size: 16px; }
+    .video-player { position: relative; width: 100%; aspect-ratio: 16 / 9; overflow: hidden; background: var(--ink); border: 1px solid rgba(8,41,79,.25); box-shadow: var(--shadow); }
+    .video-player iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
     .video-description { display: flex; flex-direction: column; justify-content: center; padding: 28px; background: var(--cream); border: 1px solid var(--line); box-shadow: var(--shadow); }
     .video-description .tag { color: var(--red); font-family: Arial, sans-serif; font-size: 11px; font-weight: 800; letter-spacing: .13em; text-transform: uppercase; }
     .video-description h3 { margin: 15px 0 10px; font-size: 29px; line-height: 1.08; }
-    .video-description p { margin: 0; color: var(--muted); font-size: 16px; }
+    .video-description p { margin: 0 0 18px; color: var(--muted); font-size: 16px; }
+    .video-description a { color: var(--red); font-family: Arial, sans-serif; font-size: 12px; font-weight: 800; letter-spacing: .05em; text-decoration: none; text-transform: uppercase; }
+    .video-description a:hover { text-decoration: underline; }
     .curiosity-section { background: #f2f8fd; }
     .curiosity-card { max-width: 880px; padding: 30px; background: var(--cream); border: 1px solid var(--line); border-left: 6px solid var(--red); box-shadow: var(--shadow); }
     .curiosity-card h3 { margin: 0 0 18px; font-size: clamp(25px, 4vw, 34px); line-height: 1.08; }
@@ -356,15 +356,14 @@
         <h2 class="section-title">Vídeos do programa.</h2>
         <p class="section-intro">Reveja momentos no ar, participações especiais e registros da equipe do Clube do Rei.</p>
         <div class="video-showcase">
-          <div class="video-placeholder" role="status" aria-label="Os vídeos do programa serão publicados aqui em breve">
-            <span class="video-play" aria-hidden="true">▶</span>
-            <strong>Em breve</strong>
-            <span>Os momentos do Clube do Rei aparecerão aqui.</span>
+          <div class="video-player">
+            <iframe src="https://www.youtube.com/embed/NKyh-tC5mb4?feature=oembed" title="CLUBE DO REI NO AR ABERTURA DIA 27/09/26" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
           </div>
           <article class="video-description">
-            <span class="tag">Clube do Rei • Terê FM 93,7</span>
-            <h3>A emoção do programa, também em vídeo</h3>
-            <p>Este espaço vai reunir entrevistas, participações e trechos especiais do programa no ar.</p>
+            <span class="tag">Abertura • 27/09/2026</span>
+            <h3>Clube do Rei no ar</h3>
+            <p>A abertura do programa com Sérgio Elabras, dando as boas-vindas aos ouvintes e apresentando a edição de domingo.</p>
+            <a href="https://www.youtube.com/watch?v=NKyh-tC5mb4&amp;feature=youtu.be" target="_blank" rel="noopener">Abrir no YouTube ↗</a>
           </article>
         </div>
       </div>
