@@ -453,5 +453,20 @@
       <a class="visitor-counter" href="https://flagcounter.me/details/kGn" target="_blank" rel="noopener"><img src="https://flagcounter.me/kGn" alt="Contador de visitantes por país"></a>
     </div>
   </footer>
+  <script>
+    (() => {
+      const menu = document.querySelector('.quickmenu');
+      if (!menu) return;
+      menu.addEventListener('click', (event) => {
+        if (event.target.closest('.quickmenu-panel a')) menu.open = false;
+      });
+      document.addEventListener('click', (event) => {
+        if (!menu.contains(event.target)) menu.open = false;
+      });
+      document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape') menu.open = false;
+      });
+    })();
+  </script>
 </body>
 </html>
