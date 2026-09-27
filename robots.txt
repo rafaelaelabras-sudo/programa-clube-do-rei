@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://clubedoreiteresopolis.com.br/sitemap.xml
