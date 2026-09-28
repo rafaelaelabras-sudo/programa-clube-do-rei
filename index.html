@@ -154,15 +154,11 @@
     .news-card a:hover { text-decoration: underline; }
     .source-note { margin-top: 22px; color: var(--muted); font-family: Arial, sans-serif; font-size: 12px; }
     .video-section { background: linear-gradient(135deg, #f9fcff, #e3f1fb); }
-    .video-showcase { display: grid; grid-template-columns: 1.15fr .85fr; gap: 20px; align-items: stretch; margin-top: 30px; }
-    .video-player { position: relative; width: 100%; aspect-ratio: 16 / 9; overflow: hidden; background: var(--ink); border: 1px solid rgba(8,41,79,.25); box-shadow: var(--shadow); }
-    .video-player iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
-    .video-description { display: flex; flex-direction: column; justify-content: center; padding: 28px; background: var(--cream); border: 1px solid var(--line); box-shadow: var(--shadow); }
-    .video-description .tag { color: var(--red); font-family: Arial, sans-serif; font-size: 11px; font-weight: 800; letter-spacing: .13em; text-transform: uppercase; }
-    .video-description h3 { margin: 15px 0 10px; font-size: 29px; line-height: 1.08; }
-    .video-description p { margin: 0 0 18px; color: var(--muted); font-size: 16px; }
-    .video-description a { color: var(--red); font-family: Arial, sans-serif; font-size: 12px; font-weight: 800; letter-spacing: .05em; text-decoration: none; text-transform: uppercase; }
-    .video-description a:hover { text-decoration: underline; }
+    .video-gateway { display: grid; grid-template-columns: 70px 1fr auto; gap: 20px; align-items: center; margin-top: 30px; padding: 24px; background: var(--cream); border: 1px solid var(--line); box-shadow: var(--shadow); }
+    .video-gateway-icon { width: 64px; height: 64px; display: grid; place-items: center; border-radius: 50%; background: var(--ink); color: #bfe9ff; font-family: Arial, sans-serif; font-size: 25px; }
+    .video-gateway .tag { color: var(--red); font-family: Arial, sans-serif; font-size: 11px; font-weight: 800; letter-spacing: .13em; text-transform: uppercase; }
+    .video-gateway h3 { margin: 7px 0 5px; font-size: 26px; line-height: 1.08; }
+    .video-gateway p { margin: 0; color: var(--muted); font-size: 15px; }
     .curiosity-section { background: #f2f8fd; }
     .curiosity-card { max-width: 880px; padding: 30px; background: var(--cream); border: 1px solid var(--line); border-left: 6px solid var(--red); box-shadow: var(--shadow); }
     .curiosity-card h3 { margin: 0 0 18px; font-size: clamp(25px, 4vw, 34px); line-height: 1.08; }
@@ -176,11 +172,11 @@
     .raffle-card h3 { margin: 12px 0; font-size: 25px; line-height: 1.08; }
     .raffle-card p, .raffle-card li { color: var(--muted); font-size: 16px; }
     .raffle-card ul { padding-left: 20px; }
-    .raffle-card li + li { margin-top: 8px; } .raffle-winners { margin-top: 18px; padding-top: 16px; border-top: 1px solid var(--line); } .raffle-winners .winner-card + .winner-card { margin-top: 12px; }
+    .raffle-card li + li { margin-top: 8px; }
     .raffle-cta { margin-top: 28px; padding: 25px; background: var(--ink); color: var(--cream); }
     .raffle-cta p { margin: 0 0 16px; color: #d3e7f5; font-size: 17px; }
     .raffle-note { margin: 12px 0 0; color: var(--muted); font-family: Arial, sans-serif; font-size: 12px; }
-    .winners-panel { display: none; margin-top: 28px; padding: 25px; background: var(--cream); border: 1px solid var(--line); border-top: 5px solid var(--red); box-shadow: var(--shadow); }
+    .winners-panel { margin-top: 28px; padding: 25px; background: var(--cream); border: 1px solid var(--line); border-top: 5px solid var(--red); box-shadow: var(--shadow); }
     .winners-title { margin: 8px 0 20px; font-size: clamp(25px, 4vw, 34px); line-height: 1.05; }
     .winners-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
     .winner-card { padding: 18px; background: #eaf3fb; border: 1px solid var(--line); }
@@ -235,7 +231,7 @@
       .hero-grid { grid-template-columns: 1fr; gap: 42px; }
       .radio-panel { max-width: 420px; width: 100%; margin: 0 auto; transform: rotate(1deg); }
       .hero:after { font-size: 170px; right: -12%; top: 40px; }
-      .live-grid, .message, .news-grid, .crew, .raffle-grid, .video-showcase, .winners-grid { grid-template-columns: 1fr; }
+      .live-grid, .message, .news-grid, .crew, .raffle-grid, .video-gateway, .winners-grid { grid-template-columns: 1fr; }
       .sponsor-grid { grid-template-columns: repeat(2, 1fr); }
       .sponsor-cta { flex-direction: column; align-items: flex-start; }
       .reasons { grid-template-columns: 1fr; }
@@ -281,7 +277,7 @@
           <a href="https://www.robertocarlos.com/agenda/" target="_blank" rel="noopener">♛ Agenda do Rei</a>
           <a href="#equipe">♙ Equipe e fotos</a>
           <a href="#noticias">▣ Notícias</a>
-          <a href="#videos">▶ Vídeos do programa</a>
+          <a href="videos.html">▶ Vídeos do programa</a>
           <a href="#curiosidades">✦ Curiosidades do Rei</a>
           <a href="#patrocinadores">★ Patrocinadores e anúncios</a>
           <a href="https://wa.me/?text=Confira%20o%20Programa%20Clube%20do%20Rei%20Teres%C3%B3polis%20na%20Ter%C3%AA%20FM%2093%2C7%3A%20https%3A%2F%2Fclubedoreiteresopolis.com.br%2F" target="_blank" rel="noopener">↗ Compartilhar o site</a>
@@ -385,17 +381,15 @@
       <div class="wrap">
         <div class="eyebrow">Clube do Rei em vídeo</div>
         <h2 class="section-title">Vídeos do programa.</h2>
-        <p class="section-intro">Reveja momentos no ar, participações especiais e registros da equipe do Clube do Rei.</p>
-        <div class="video-showcase">
-          <div class="video-player">
-            <iframe src="https://www.youtube.com/embed/NKyh-tC5mb4?feature=oembed" title="CLUBE DO REI NO AR ABERTURA DIA 27/09/26" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-          </div>
-          <article class="video-description">
-            <span class="tag">Abertura • 27/09/2026</span>
+        <p class="section-intro">Acompanhe os trechos do programa em uma página própria, organizada para você escolher o que assistir.</p>
+        <div class="video-gateway">
+          <div class="video-gateway-icon" aria-hidden="true">▶</div>
+          <div>
+            <span class="tag">Vídeo mais recente • 27/09/2026</span>
             <h3>Clube do Rei no ar</h3>
-            <p>A abertura do programa com Sérgio Elabras, dando as boas-vindas aos ouvintes e apresentando a edição de domingo.</p>
-            <a href="https://www.youtube.com/watch?v=NKyh-tC5mb4&amp;feature=youtu.be" target="_blank" rel="noopener">Abrir no YouTube ↗</a>           </article>           <div class="video-player">             <iframe src="https://www.youtube.com/embed/tOIJKUtd4gU?feature=oembed" title="Ganhadoras do sorteio e despedida — Clube do Rei, 27/09/2026" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>           </div>           <article class="video-description">             <span class="tag">Encerramento • 27/09/2026</span>             <h3>Ganhadoras do sorteio e despedida</h3>             <p>Sérgio Elabras anuncia as ganhadoras dos brindes, agradece aos patrocinadores e se despede dos ouvintes.</p>             <a href="https://www.youtube.com/watch?v=tOIJKUtd4gU" target="_blank" rel="noopener">Abrir no YouTube ↗</a>
-          </article>
+            <p>Veja esta abertura e os próximos vídeos na galeria do programa.</p>
+          </div>
+          <a class="button primary" href="videos.html">Acessar área de vídeos ↗</a>
         </div>
       </div>
     </section>
@@ -418,8 +412,8 @@
     <section class="section raffle-section" id="sorteio">
       <div class="wrap">
         <div class="eyebrow">Participe e concorra</div>
-        <h2 class="section-title">Brindes da semana e ganhadoras</h2>
-        <p class="section-intro">Domingo, 27/09/2026 • Veja cada brinde junto de quem ganhou.</p>
+        <h2 class="section-title">Sorteio deste Domingo</h2>
+        <p class="section-intro">Domingo, 27/09/2026 • Mande seu nome completo, telefone e bairro para concorrer aos brindes.</p>
         <div class="raffle-grid">
           <article class="raffle-card">
             <span class="tag">Prêmio • Doces Húngaros</span>
@@ -427,12 +421,12 @@
             <ul>
               <li>03 deliciosas empadas de frango + 01 super café expresso; ou</li>
               <li>03 unidades do fabuloso mil-folhas de creme + 01 super café expresso.</li>
-            </ul><div class="raffle-winners"><span class="tag">Ganhadoras da semana</span><article class="winner-card"><span class="tag">Brinde 1</span><h4>03 mil-folhas de creme + 01 super café expresso</h4><p class="winner-name">Ganhadora: Simone de Oliveira Cunha</p><p>Bomsucesso • Telefone final: 0452</p></article><article class="winner-card"><span class="tag">Brinde 2</span><h4>03 empadas de frango + 01 super café expresso</h4><p class="winner-name">Ganhadora: Edneia Aparecida Coelho Silva</p><p>Albuquerque • Telefone final: 5285</p></article></div>
+            </ul>
           </article>
           <article class="raffle-card">
             <span class="tag">Prêmio • Restaurante e Pizzaria Olício's</span>
             <h3>Pizza para dividir e aproveitar</h3>
-            <p>01 pizza de 40 cm — calabresa, frango com catupiry, portuguesa ou mussarela — + 01 Guaraná de 2 litros.</p><div class="raffle-winners"><span class="tag">Ganhadora da semana</span><article class="winner-card"><p class="winner-name">Lenir Maia de Andrade</p><p>Meudom • Telefone final: 9182</p></article></div>
+            <p>01 pizza de 40 cm — calabresa, frango com catupiry, portuguesa ou mussarela — + 01 Guaraná de 2 litros.</p>
           </article>
         </div>
         <div class="raffle-cta">
