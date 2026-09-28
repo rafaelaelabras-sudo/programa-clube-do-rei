@@ -43,9 +43,14 @@
     .section-title { margin:0 0 12px; font-size:clamp(31px,5vw,48px); line-height:1; letter-spacing:-.035em; }
     .section-intro { max-width:760px; margin:0 0 28px; color:var(--muted); font-size:17px; }
     .photo-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:22px; }
-    .photo-card { overflow:hidden; margin:0; background:var(--cream); border:1px solid var(--line); box-shadow:var(--shadow); }
+    .photo-card, .moment-card { overflow:hidden; margin:0; background:var(--cream); border:1px solid var(--line); box-shadow:var(--shadow); }
     .photo-card img { display:block; width:100%; aspect-ratio:4 / 3; object-fit:cover; object-position:center 35%; background:#dcecf8; }
     .photo-caption { padding:22px 24px 24px; }
+    .moments-heading { margin:48px 0 0; }
+    .moments-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:18px; margin-top:24px; }
+    .moment-link { display:block; background:#dcecf8; }
+    .moment-photo { display:block; width:100%; height:250px; object-fit:contain; background:#dcecf8; }
+    .moment-caption { min-height:66px; padding:14px 16px; border-top:1px solid var(--line); font-size:15px; font-weight:bold; line-height:1.25; }
     .role { color:var(--red); font-family:Arial,sans-serif; font-size:11px; font-weight:800; letter-spacing:.12em; text-transform:uppercase; }
     .photo-caption h2 { margin:7px 0 8px; font-size:27px; line-height:1.05; }
     .photo-caption p { margin:0; color:var(--muted); font-size:15px; }
@@ -63,6 +68,8 @@
       .site-clock-date { font-size:11px; }
       .quickbar-inner { min-height:54px; }
       .photo-grid { grid-template-columns:1fr; }
+      .moments-grid { grid-template-columns:repeat(2,1fr); }
+      .moment-photo { height:220px; }
       .footer-row { flex-direction:column; align-items:flex-start; }
     }
     @media (max-width:430px) {
@@ -70,6 +77,7 @@
       .site-clock { margin-left:auto; }
       .quickbar-label { display:none; }
       .quickbar-inner { justify-content:center; }
+      .moments-grid { grid-template-columns:1fr; }
     }
   </style>
 </head>
@@ -101,7 +109,7 @@
     <section class="gallery"><div class="wrap">
       <div class="eyebrow" style="color:var(--red)">Nossa equipe</div>
       <h2 class="section-title">Quem faz o programa.</h2>
-      <p class="section-intro">Retratos da equipe do Clube do Rei. Novos registros do estúdio e dos domingos no ar podem ser acrescentados a esta galeria.</p>
+      <p class="section-intro">Retratos da equipe e registros dos estúdios, encontros e bastidores do Clube do Rei.</p>
       <div class="photo-grid">
         <figure class="photo-card">
           <img src="1790083212885-1d871d3e.jpg" alt="Sérgio Elabras apresentando o Programa Clube do Rei em um estúdio de rádio" loading="lazy">
@@ -120,6 +128,49 @@
             <p>Nos bastidores, cuidando do áudio para que cada música, mensagem e homenagem chegue com qualidade.</p>
             <p class="quote">“Nos bastidores, a emoção também acontece.”</p>
           </figcaption>
+        </figure>
+      </div>
+      <div class="moments-heading">
+        <div class="eyebrow" style="color:var(--red)">Momentos do programa</div>
+        <h2 class="section-title">Registros do Clube do Rei.</h2>
+        <p class="section-intro">Fotos de encontros, estúdios e bastidores. Toque em uma imagem para ampliá-la.</p>
+      </div>
+      <div class="moments-grid">
+        <figure class="moment-card">
+          <a class="moment-link" href="foto-encontro-especial.jpg" target="_blank" rel="noopener"><img class="moment-photo" src="foto-encontro-especial.jpg" alt="Registro de um encontro especial entre dois convidados" loading="lazy"></a>
+          <figcaption class="moment-caption">Recordação de um encontro especial</figcaption>
+        </figure>
+        <figure class="moment-card">
+          <a class="moment-link" href="foto-cabine-de-radio.jpg" target="_blank" rel="noopener"><img class="moment-photo" src="foto-cabine-de-radio.jpg" alt="Locutor sentado à mesa em uma cabine de rádio, com microfone e equipamentos de áudio" loading="lazy"></a>
+          <figcaption class="moment-caption">Na cabine de transmissão</figcaption>
+        </figure>
+        <figure class="moment-card">
+          <a class="moment-link" href="foto-equipe-radio-01.jpg" target="_blank" rel="noopener"><img class="moment-photo" src="foto-equipe-radio-01.jpg" alt="Equipe e convidados reunidos em um estúdio de rádio" loading="lazy"></a>
+          <figcaption class="moment-caption">Equipe e convidados reunidos</figcaption>
+        </figure>
+        <figure class="moment-card">
+          <a class="moment-link" href="foto-equipe-radio-02.jpg" target="_blank" rel="noopener"><img class="moment-photo" src="foto-equipe-radio-02.jpg" alt="Duas pessoas em frente à identificação da rádio JBFM 99,9" loading="lazy"></a>
+          <figcaption class="moment-caption">Visita ao estúdio da JBFM</figcaption>
+        </figure>
+        <figure class="moment-card">
+          <a class="moment-link" href="foto-estudio-teresopolis-01.jpg" target="_blank" rel="noopener"><img class="moment-photo" src="foto-estudio-teresopolis-01.jpg" alt="Dois profissionais em um estúdio de rádio, com microfone em primeiro plano" loading="lazy"></a>
+          <figcaption class="moment-caption">Bastidores da transmissão</figcaption>
+        </figure>
+        <figure class="moment-card">
+          <a class="moment-link" href="foto-equipe-tere-fm-01.jpg" target="_blank" rel="noopener"><img class="moment-photo" src="foto-equipe-tere-fm-01.jpg" alt="Equipe reunida diante da identificação da Terê FM" loading="lazy"></a>
+          <figcaption class="moment-caption">Visita à Terê FM 93,7</figcaption>
+        </figure>
+        <figure class="moment-card">
+          <a class="moment-link" href="foto-equipe-tere-fm-02.jpg" target="_blank" rel="noopener"><img class="moment-photo" src="foto-equipe-tere-fm-02.jpg" alt="Dois integrantes em um estúdio da Terê FM" loading="lazy"></a>
+          <figcaption class="moment-caption">Encontro no estúdio</figcaption>
+        </figure>
+        <figure class="moment-card">
+          <a class="moment-link" href="foto-equipe-tere-fm-03.jpg" target="_blank" rel="noopener"><img class="moment-photo" src="foto-equipe-tere-fm-03.jpg" alt="Grupo reunido para uma foto no estúdio da rádio" loading="lazy"></a>
+          <figcaption class="moment-caption">Registro da equipe no estúdio</figcaption>
+        </figure>
+        <figure class="moment-card">
+          <a class="moment-link" href="foto-estudio-tere-fm-02.jpg" target="_blank" rel="noopener"><img class="moment-photo" src="foto-estudio-tere-fm-02.jpg" alt="Locutor no estúdio da Terê FM, cercado por equipamentos de áudio" loading="lazy"></a>
+          <figcaption class="moment-caption">Estúdio em atividade</figcaption>
         </figure>
       </div>
       <div class="return-bottom"><a class="button dark" href="index.html#inicio">← Voltar à página principal</a></div>
