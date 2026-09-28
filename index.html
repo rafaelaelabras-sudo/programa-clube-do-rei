@@ -81,7 +81,10 @@
     .on-air:before { content: '●'; margin-right: 6px; color: #51d18c; }
     .frequency { position: relative; z-index: 1; margin: 35px 0 6px; color: #f6fcff; font-family: Arial, sans-serif; font-size: clamp(62px, 9vw, 100px); font-weight: 900; letter-spacing: -.09em; line-height: .85; }
     .frequency span { color: #76c8f5; font-size: .47em; letter-spacing: -.05em; }
-    .dial { position: relative; z-index: 1; width: min(215px, 70vw); height: min(215px, 70vw); margin: 23px auto 25px; border: 2px solid rgba(191,233,255,.75); border-radius: 50%; background: repeating-conic-gradient(from -28deg, rgba(191,233,255,.78) 0 1deg, transparent 1deg 16deg); box-shadow: inset 0 0 0 11px rgba(2,24,49,.38), inset 0 0 0 12px rgba(191,233,255,.16), 0 0 0 6px rgba(4,30,59,.34); }
+    .dial-link { position: relative; z-index: 1; display: block; width: min(215px, 70vw); height: min(215px, 70vw); margin: 23px auto 25px; border-radius: 50%; text-decoration: none; }
+    .dial-link:focus-visible { outline: 3px solid #a8ddff; outline-offset: 9px; }
+    .dial-link:hover .dial { transform: scale(1.035); }
+    .dial { position: relative; z-index: 1; width: 100%; height: 100%; border: 2px solid rgba(191,233,255,.75); border-radius: 50%; background: repeating-conic-gradient(from -28deg, rgba(191,233,255,.78) 0 1deg, transparent 1deg 16deg); box-shadow: inset 0 0 0 11px rgba(2,24,49,.38), inset 0 0 0 12px rgba(191,233,255,.16), 0 0 0 6px rgba(4,30,59,.34); transition: transform .15s ease; }
     .dial:before { content: ''; position: absolute; inset: 36px; border: 1px solid rgba(191,233,255,.55); border-radius: 50%; background: radial-gradient(circle at 35% 30%, #1e78b9, #061b35 70%); }
     .dial:after { content: 'SINTONIZE A EMOÇÃO'; position: absolute; left: 0; right: 0; bottom: 37px; color: #a9ddfb; font-family: Arial, sans-serif; font-size: 8px; font-weight: 800; letter-spacing: .16em; text-align: center; }
     .needle { position: absolute; z-index: 2; left: 50%; top: 50%; width: 47%; height: 2px; background: #bceaff; transform: rotate(-33deg); transform-origin: left center; box-shadow: 0 0 10px #8cdbff; }
@@ -320,7 +323,7 @@
         <div class="radio-panel" aria-label="Painel de sintonia do Clube do Rei">
           <div class="panel-top"><span>Terê FM • Estúdio 01</span><span class="on-air">No ar</span></div>
           <div class="frequency">93<span>.7</span></div>
-          <div class="dial"><span class="needle"></span></div>
+          <a class="dial-link" href="https://www.radios.com.br/aovivo/radio-tere-937-fm/14769" target="_blank" rel="noopener" aria-label="Abrir o player da Rádio Terê FM 93,7 em nova aba" title="Ouvir a Terê FM ao vivo"><div class="dial" aria-hidden="true"><span class="needle"></span></div></a>
           <div class="panel-bottom"><span>Clube do Rei</span><span>Dom • 09:00—11:00</span></div>
         </div>
       </div>
@@ -335,7 +338,7 @@
             <div class="time">Das 9h às 11h</div>
             <div class="heritage">Mais de 25 anos no ar</div>
             <div class="station"><strong>Terê FM 93,7</strong><span>Teresópolis • Rio de Janeiro</span></div>
-            <a class="button dark" href="https://terefm.com/radio/" target="_blank" rel="noopener">▶ Ouvir a Terê FM ao vivo</a>
+            <a class="button dark" href="https://www.radios.com.br/aovivo/radio-tere-937-fm/14769" target="_blank" rel="noopener">▶ Ouvir a Terê FM ao vivo</a>
           </article>
           <article class="info-card">
             <h3>Chegue junto no programa.</h3>
