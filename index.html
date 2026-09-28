@@ -120,6 +120,10 @@
     .crew-member strong { display: block; margin-top: 8px; font-size: 21px; }
     .crew-member p { margin: 8px 0 0; color: var(--muted); font-size: 14px; }
     .crew-member .crew-quote { margin-top: 15px; color: var(--red); font-size: 15px; font-style: italic; }
+    .photo-gateway { display: flex; justify-content: space-between; align-items: center; gap: 22px; margin-top: 22px; padding: 24px; background: rgba(255,255,255,.6); border: 1px solid var(--line); }
+    .photo-gateway .role { display: block; color: var(--red); font-family: Arial, sans-serif; font-size: 11px; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; }
+    .photo-gateway strong { display: block; margin-top: 6px; font-size: 22px; }
+    .photo-gateway p { margin: 6px 0 0; color: var(--muted); font-size: 15px; }
     .info-card { background: var(--gold); border-color: var(--ink); box-shadow: none; }
     .info-card h3 { font-size: 33px; line-height: 1.03; margin: 0 0 22px; }
     .steps { list-style: none; padding: 0; margin: 0; counter-reset: steps; }
@@ -166,6 +170,10 @@
     .curiosity-sources { margin-top: 23px; padding-top: 15px; border-top: 1px solid var(--line); font-family: Arial, sans-serif; font-size: 12px; }
     .curiosity-sources a { color: var(--red); font-weight: 800; }
     .raffle-section { background: linear-gradient(135deg, #e9f4fc, #dcecf8); }
+    .raffle-portal { display: grid; grid-template-columns: 1fr auto; gap: 22px; align-items: center; margin-top: 28px; padding: 25px; background: var(--cream); border: 1px solid var(--line); border-top: 5px solid var(--red); box-shadow: var(--shadow); }
+    .raffle-portal .tag { color: var(--red); font-family: Arial, sans-serif; font-size: 11px; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; }
+    .raffle-portal h3 { margin: 10px 0 6px; font-size: 26px; line-height: 1.08; }
+    .raffle-portal p { margin: 0; color: var(--muted); font-size: 15px; }
     .raffle-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; margin-top: 28px; }
     .raffle-card { padding: 25px; background: var(--cream); border: 1px solid var(--line); border-top: 5px solid var(--red); box-shadow: var(--shadow); }
     .raffle-card .tag { color: var(--red); font-family: Arial, sans-serif; font-size: 11px; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; }
@@ -231,7 +239,8 @@
       .hero-grid { grid-template-columns: 1fr; gap: 42px; }
       .radio-panel { max-width: 420px; width: 100%; margin: 0 auto; transform: rotate(1deg); }
       .hero:after { font-size: 170px; right: -12%; top: 40px; }
-      .live-grid, .message, .news-grid, .crew, .raffle-grid, .video-gateway, .winners-grid { grid-template-columns: 1fr; }
+      .live-grid, .message, .news-grid, .crew, .raffle-grid, .video-gateway, .raffle-portal, .winners-grid { grid-template-columns: 1fr; }
+      .photo-gateway { flex-direction: column; align-items: flex-start; }
       .sponsor-grid { grid-template-columns: repeat(2, 1fr); }
       .sponsor-cta { flex-direction: column; align-items: flex-start; }
       .reasons { grid-template-columns: 1fr; }
@@ -273,9 +282,9 @@
           <a href="#ao-vivo">▶ Ouvir ao vivo</a>
           <a href="#participar">✉ Pedir música e mandar recado</a>
           <a href="https://wa.me/5521972370937" target="_blank" rel="noopener">☏ WhatsApp da rádio</a>
-          <a href="#sorteio">🎁 Sorteio deste Domingo</a>
+          <a href="sorteio.html">🎁 Brindes e ganhadoras</a>
           <a href="https://www.robertocarlos.com/agenda/" target="_blank" rel="noopener">♛ Agenda do Rei</a>
-          <a href="#equipe">♙ Equipe e fotos</a>
+          <a href="fotos.html">♙ Fotos do Programa</a>
           <a href="#noticias">▣ Notícias</a>
           <a href="videos.html">▶ Vídeos do programa</a>
           <a href="#curiosidades">✦ Curiosidades do Rei</a>
@@ -329,21 +338,13 @@
             <a class="button" href="https://wa.me/5521967861216?text=Ol%C3%A1%2C%20Clube%20do%20Rei!%20Quero%20participar%20do%20programa.%20Minha%20mensagem%3A%20" target="_blank" rel="noopener">Enviar mensagem</a>
           </article>
         </div>
-        <div class="crew" id="equipe" aria-label="Equipe do Clube do Rei">
-          <div class="crew-member">
-            <img class="crew-photo" src="1790083212885-1d871d3e.jpg" alt="Sérgio Elabras apresentando o programa em um estúdio de rádio">
-            <span class="role">Locução</span>
-            <strong>Sérgio Elabras</strong>
-            <p>Radialista e publicitário, iniciou sua carreira no Rio de Janeiro. Passou pela Imprensa FM e pela Alvorada FM, entre outras rádios, trabalhando também na TV Manchete.</p>
-            <p class="crew-quote">“A voz da família que coloca o fã no ar.”</p>
+        <div class="photo-gateway" id="equipe" aria-label="Fotos e equipe do Clube do Rei">
+          <div>
+            <span class="role">Equipe e registros do programa</span>
+            <strong>Sérgio Elabras • Locução &nbsp;|&nbsp; Rafaela Elabras • Operação de áudio</strong>
+            <p>Conheça a equipe e veja as fotos do Clube do Rei em uma galeria própria.</p>
           </div>
-          <div class="crew-member">
-            <img class="crew-photo" src="1790083212887-51ce0d06.jpg" alt="Rafaela Elabras, responsável pela operação de áudio">
-            <span class="role">Operação de áudio</span>
-            <strong>Rafaela Elabras</strong>
-            <p>Nos bastidores, cuidando do áudio para que cada música, mensagem e homenagem chegue com qualidade.</p>
-            <p class="crew-quote">“Nos bastidores, a emoção também acontece.”</p>
-          </div>
+          <a class="button primary" href="fotos.html">Ver fotos do Programa ↗</a>
         </div>
       </div>
     </section>
@@ -385,9 +386,9 @@
         <div class="video-gateway">
           <div class="video-gateway-icon" aria-hidden="true">▶</div>
           <div>
-            <span class="tag">Vídeo mais recente • 27/09/2026</span>
-            <h3>Clube do Rei no ar</h3>
-            <p>Veja esta abertura e os próximos vídeos na galeria do programa.</p>
+            <span class="tag">2 vídeos • 27/09/2026</span>
+            <h3>Abertura e encerramento</h3>
+            <p>Veja os dois registros do programa na galeria, organizados por data.</p>
           </div>
           <a class="button primary" href="videos.html">Acessar área de vídeos ↗</a>
         </div>
@@ -411,56 +412,16 @@
 
     <section class="section raffle-section" id="sorteio">
       <div class="wrap">
-        <div class="eyebrow">Participe e concorra</div>
-        <h2 class="section-title">Sorteio deste Domingo</h2>
-        <p class="section-intro">Domingo, 27/09/2026 • Mande seu nome completo, telefone e bairro para concorrer aos brindes.</p>
-        <div class="raffle-grid">
-          <article class="raffle-card">
-            <span class="tag">Prêmio • Doces Húngaros</span>
-            <h3>Uma delícia para acompanhar o seu café</h3>
-            <ul>
-              <li>03 deliciosas empadas de frango + 01 super café expresso; ou</li>
-              <li>03 unidades do fabuloso mil-folhas de creme + 01 super café expresso.</li>
-            </ul>
-          </article>
-          <article class="raffle-card">
-            <span class="tag">Prêmio • Restaurante e Pizzaria Olício's</span>
-            <h3>Pizza para dividir e aproveitar</h3>
-            <p>01 pizza de 40 cm — calabresa, frango com catupiry, portuguesa ou mussarela — + 01 Guaraná de 2 litros.</p>
-          </article>
-        </div>
-        <div class="raffle-cta">
-          <p>Estamos esperando a sua participação! O resultado vai ao ar no finalzinho do programa.</p>
-          <a class="button whatsapp" href="https://wa.me/5521967861216?text=Ol%C3%A1%2C%20Clube%20do%20Rei%21%20Quero%20participar%20do%20Sorteio%20deste%20Domingo%2C%2027%2F09%2F2026.%0ANome%20completo%3A%20%0ATelefone%3A%20%0ABairro%3A%20" target="_blank" rel="noopener">Enviar meus dados pelo WhatsApp ↗</a>
-          <p class="raffle-note">O botão abre uma mensagem pronta para a produção. Confira seus dados e confirme o envio no WhatsApp.</p>
-        </div>
-        <div class="winners-panel" aria-labelledby="winners-title">
-          <div class="eyebrow">Resultado do sorteio</div>
-          <h3 class="winners-title" id="winners-title">Ganhadores do sorteio Clube do Rei de 27/09/26</h3>
-          <p class="winners-congrats">Parabéns às ganhadoras e muito obrigado a todos que participaram!</p>
-          <div class="winners-grid">
-            <article class="winner-card">
-              <span class="tag">Doces Húngaros</span>
-              <h4>01 MIL-FOLHAS DE CREME + 01 SUPER CAFÉ EXPRESSO</h4>
-              <p class="winner-name">Simone de Oliveira Cunha</p>
-              <p>Bomsucesso</p>
-              <p class="winner-phone">Telefone final: #####0452</p>
-            </article>
-            <article class="winner-card">
-              <span class="tag">Doces Húngaros</span>
-              <h4>03 MARAVILHOSAS EMPADAS DE FRANGO + 01 SUPER CAFÉ EXPRESSO</h4>
-              <p class="winner-name">Edneia Aparecida Coelho Silva</p>
-              <p>Albuquerque</p>
-              <p class="winner-phone">Telefone final: #####5285</p>
-            </article>
-            <article class="winner-card">
-              <span class="tag">Restaurante e Pizzaria Olício's</span>
-              <h4>01 PIZZA DE 40CM + 01 GUARANÁ DE 2 LITROS</h4>
-              <p class="winner-name">Lenir Maia de Andrade</p>
-              <p>Meudom</p>
-              <p class="winner-phone">Telefone final: #####9182</p>
-            </article>
+        <div class="eyebrow">Brindes e sorteios do Clube do Rei</div>
+        <h2 class="section-title">Brindes e ganhadoras.</h2>
+        <p class="section-intro">Confira os prêmios e os nomes de quem ganhou, sempre juntos para ficar fácil identificar cada resultado.</p>
+        <div class="raffle-portal">
+          <div>
+            <span class="tag">Último sorteio • 27/09/2026</span>
+            <h3>Brindes da semana e resultado.</h3>
+            <p>A próxima lista de brindes será publicada assim que for confirmada pela produção. Os sorteios anteriores ficam organizados por data.</p>
           </div>
+          <a class="button primary" href="sorteio.html">Acessar brindes e ganhadoras ↗</a>
         </div>
       </div>
     </section>

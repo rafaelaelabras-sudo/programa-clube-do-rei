@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Brindes e ganhadoras | Programa CLUBE DO REI</title>
+  <meta name="description" content="Confira os brindes dos sorteios do Clube do Rei e veja cada prêmio junto de sua ganhadora.">
+  <link rel="canonical" href="https://clubedoreiteresopolis.com.br/sorteio.html">
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Brindes e ganhadoras | Programa CLUBE DO REI">
+  <meta property="og:description" content="Brindes e resultados do sorteio do Clube do Rei, organizados juntos por data.">
+  <meta name="theme-color" content="#08294f">
+  <style>
+    :root { --ink:#08294f; --paper:#eaf3fb; --cream:#f9fcff; --gold:#75b9e7; --gold-light:#cbe8fb; --red:#1769aa; --muted:#52677d; --line:rgba(8,41,79,.16); --shadow:0 20px 50px rgba(8,41,79,.16); }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { margin:0; color:var(--ink); background:var(--paper); font-family:Georgia,'Times New Roman',serif; line-height:1.5; }
+    a { color:inherit; }
+    .topline { height:7px; background:repeating-linear-gradient(135deg,#2e8bcc 0 12px,var(--ink) 12px 24px,var(--gold) 24px 36px); }
+    .wrap { width:min(1120px,calc(100% - 40px)); margin:0 auto; }
+    header { padding:24px 0 16px; border-bottom:1px solid var(--line); }
+    .nav { display:flex; justify-content:space-between; align-items:center; gap:20px; }
+    .brand { display:flex; gap:13px; align-items:center; text-decoration:none; }
+    .brand-mark { width:47px; height:47px; display:grid; place-items:center; border-radius:50%; background:var(--ink); color:var(--gold-light); font-size:25px; border:3px solid var(--gold); box-shadow:0 0 0 3px var(--ink); }
+    .brand-name { font-size:15px; letter-spacing:.15em; font-weight:bold; text-transform:uppercase; }
+    .brand-sub { display:block; margin-top:2px; color:var(--red); font-size:12px; letter-spacing:.08em; }
+    .site-clock { min-width:225px; padding:11px 15px; border:1px solid var(--line); background:rgba(249,252,255,.84); text-align:right; }
+    .site-clock-label { display:block; color:var(--red); font-family:Arial,sans-serif; font-size:10px; font-weight:800; letter-spacing:.14em; text-transform:uppercase; }
+    .site-clock-reading { display:flex; justify-content:flex-end; align-items:center; gap:9px; color:var(--ink); font-family:Arial,sans-serif; font-size:28px; font-weight:800; line-height:1.15; font-variant-numeric:tabular-nums; }
+    .site-clock-icon { color:var(--red); font-size:22px; }
+    .site-clock-date { display:block; margin-top:4px; color:var(--muted); font-family:Arial,sans-serif; font-size:12px; line-height:1.2; }
+    .quickbar { position:sticky; top:0; z-index:20; background:rgba(249,252,255,.96); border-bottom:1px solid var(--line); box-shadow:0 6px 16px rgba(8,41,79,.08); backdrop-filter:blur(10px); }
+    .quickbar-inner { display:flex; justify-content:space-between; align-items:center; gap:16px; min-height:58px; }
+    .button { display:inline-flex; justify-content:center; align-items:center; gap:9px; min-height:45px; padding:10px 17px; border:2px solid var(--ink); border-radius:3px; text-decoration:none; font-family:Arial,sans-serif; font-weight:800; font-size:13px; letter-spacing:.02em; }
+    .button.dark { background:var(--ink); color:var(--cream); }
+    .button.whatsapp { background:#1f9d58; color:#fff; border-color:#176d40; }
+    .quickbar-label { color:var(--red); font-family:Arial,sans-serif; font-size:11px; font-weight:800; letter-spacing:.13em; text-transform:uppercase; }
+    .page-hero { padding:58px 0 52px; background:linear-gradient(132deg,#061b35 0%,#0b477f 63%,#1b75b5 100%); color:var(--cream); }
+    .eyebrow { color:#a8ddff; font-family:Arial,sans-serif; font-size:12px; font-weight:800; letter-spacing:.18em; text-transform:uppercase; }
+    h1 { margin:12px 0; font-size:clamp(42px,7vw,76px); line-height:.98; letter-spacing:-.045em; }
+    .page-hero p { max-width:740px; margin:0; color:#d8efff; font-size:clamp(17px,2vw,21px); }
+    .content { padding:54px 0 78px; }
+    .section-title { margin:0 0 12px; font-size:clamp(31px,5vw,48px); line-height:1; letter-spacing:-.035em; }
+    .section-intro { max-width:760px; margin:0 0 26px; color:var(--muted); font-size:17px; }
+    .notice { margin:0 0 25px; padding:18px 20px; background:#dcecf8; border-left:5px solid var(--red); color:var(--ink); }
+    .notice strong { display:block; margin-bottom:3px; }
+    .archive { overflow:hidden; background:var(--cream); border:1px solid var(--line); box-shadow:var(--shadow); }
+    .archive summary { display:flex; justify-content:space-between; align-items:center; gap:15px; padding:19px 22px; background:#dcecf8; cursor:pointer; list-style:none; font-size:22px; font-weight:bold; }
+    .archive summary::-webkit-details-marker { display:none; }
+    .archive summary::after { content:'+'; color:var(--red); font-family:Arial,sans-serif; font-size:25px; }
+    .archive[open] summary::after { content:'−'; }
+    .archive-count { margin-left:auto; color:var(--muted); font-family:Arial,sans-serif; font-size:12px; font-weight:700; letter-spacing:.08em; text-transform:uppercase; }
+    .prize-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:16px; padding:20px; border-top:1px solid var(--line); }
+    .prize-card { padding:20px; background:#eaf3fb; border:1px solid var(--line); border-top:5px solid var(--red); }
+    .prize-card .sponsor { color:var(--red); font-family:Arial,sans-serif; font-size:10px; font-weight:800; letter-spacing:.12em; text-transform:uppercase; }
+    .prize-card h3 { margin:12px 0 16px; font-size:21px; line-height:1.12; }
+    .winner { padding-top:13px; border-top:1px solid var(--line); }
+    .winner-label { display:block; color:var(--muted); font-family:Arial,sans-serif; font-size:10px; font-weight:800; letter-spacing:.1em; text-transform:uppercase; }
+    .winner strong { display:block; margin-top:5px; font-size:17px; line-height:1.15; }
+    .winner p { margin:6px 0 0; color:var(--muted); font-family:Arial,sans-serif; font-size:12px; }
+    .raffle-cta { margin-top:26px; padding:24px; background:var(--ink); color:var(--cream); }
+    .raffle-cta h3 { margin:0 0 7px; color:#c9ecff; font-size:26px; line-height:1.08; }
+    .raffle-cta p { max-width:700px; margin:0 0 16px; color:#d8efff; font-size:16px; }
+    .raffle-cta .note { margin:12px 0 0; color:#bfd8eb; font-family:Arial,sans-serif; font-size:12px; }
+    .return-bottom { margin-top:30px; }
+    footer { padding:28px 0 50px; border-top:1px solid var(--line); color:var(--muted); font-family:Arial,sans-serif; font-size:12px; }
+    .footer-row { display:flex; justify-content:space-between; align-items:center; gap:18px; }
+    .footer-row a { color:var(--red); font-weight:bold; }
+    @media (max-width:760px) {
+      .wrap { width:min(100% - 28px,1120px); }
+      header { padding-top:18px; }
+      .nav { gap:10px; }
+      .site-clock { min-width:185px; padding:9px 11px; }
+      .site-clock-reading { font-size:24px; }
+      .site-clock-date { font-size:11px; }
+      .quickbar-inner { min-height:54px; }
+      .prize-grid { grid-template-columns:1fr; padding:15px; }
+      .archive summary { padding:16px; font-size:19px; }
+      .footer-row { flex-direction:column; align-items:flex-start; }
+    }
+    @media (max-width:430px) {
+      .nav { flex-wrap:wrap; }
+      .site-clock { margin-left:auto; }
+      .quickbar-label { display:none; }
+      .quickbar-inner { justify-content:center; }
+    }
+  </style>
+</head>
+<body>
+  <div class="topline"></div>
+  <header>
+    <div class="wrap nav">
+      <a class="brand" href="index.html#inicio" aria-label="Voltar ao Programa Clube do Rei Teresópolis">
+        <span class="brand-mark">♛</span>
+        <span><span class="brand-name">Programa Clube do Rei</span><span class="brand-sub">Teresópolis • Terê FM</span></span>
+      </a>
+      <div class="site-clock" aria-label="Horário e data atuais em Teresópolis">
+        <span class="site-clock-label">TERESÓPOLIS • RJ</span>
+        <div class="site-clock-reading"><span class="site-clock-icon" aria-hidden="true">🕒</span><time id="site-clock-time">--:--</time></div>
+        <time class="site-clock-date" id="site-clock-date">Carregando data…</time>
+      </div>
+    </div>
+  </header>
+  <div class="quickbar"><div class="wrap quickbar-inner">
+    <a class="button dark" href="index.html#inicio">← Voltar à página principal</a>
+    <span class="quickbar-label">Brindes e ganhadoras • Clube do Rei</span>
+  </div></div>
+  <main>
+    <section class="page-hero"><div class="wrap">
+      <div class="eyebrow">Sorteios do Clube do Rei • Terê FM 93,7</div>
+      <h1>Brindes e ganhadoras</h1>
+      <p>Confira os prêmios de cada sorteio junto do nome de quem ganhou. Assim fica fácil saber a quem corresponde cada brinde.</p>
+    </div></section>
+    <section class="content"><div class="wrap">
+      <div class="eyebrow" style="color:var(--red)">Arquivo de sorteios</div>
+      <h2 class="section-title">Resultado mais recente.</h2>
+      <p class="section-intro">O sorteio de 27/09/2026 já foi realizado. Os próximos brindes serão anunciados nesta página quando forem confirmados pela produção.</p>
+      <div class="notice"><strong>Próxima edição</strong>Acompanhe o programa para conhecer os novos brindes e o período de participação.</div>
+      <details class="archive" open>
+        <summary><span>Domingo, 27 de setembro de 2026</span><span class="archive-count">3 brindes • encerrado</span></summary>
+        <div class="prize-grid">
+          <article class="prize-card">
+            <span class="sponsor">Doces Húngaros</span>
+            <h3>03 MIL-FOLHAS DE CREME + 01 SUPER CAFÉ EXPRESSO</h3>
+            <div class="winner"><span class="winner-label">Ganhadora</span><strong>Simone de Oliveira Cunha</strong><p>Bomsucesso • telefone final #####0452</p></div>
+          </article>
+          <article class="prize-card">
+            <span class="sponsor">Doces Húngaros</span>
+            <h3>03 MARAVILHOSAS EMPADAS DE FRANGO + 01 SUPER CAFÉ EXPRESSO</h3>
+            <div class="winner"><span class="winner-label">Ganhadora</span><strong>Edneia Aparecida Coelho Silva</strong><p>Albuquerque • telefone final #####5285</p></div>
+          </article>
+          <article class="prize-card">
+            <span class="sponsor">Restaurante e Pizzaria Olício's</span>
+            <h3>01 PIZZA DE 40CM + 01 GUARANÁ DE 2 LITROS</h3>
+            <div class="winner"><span class="winner-label">Ganhadora</span><strong>Lenir Maia de Andrade</strong><p>Meudom • telefone final #####9182</p></div>
+          </article>
+        </div>
+      </details>
+      <div class="raffle-cta">
+        <h3>Estamos esperando a sua participação!</h3>
+        <p>Para concorrer aos próximos brindes, envie seu nome completo, telefone e bairro para a produção. O resultado será divulgado no finalzinho do programa.</p>
+        <a class="button whatsapp" href="https://wa.me/5521967861216?text=Ol%C3%A1%2C%20Clube%20do%20Rei%21%20Quero%20participar%20do%20pr%C3%B3ximo%20sorteio.%0ANome%20completo%3A%20%0ATelefone%3A%20%0ABairro%3A%20" target="_blank" rel="noopener">Enviar meus dados pelo WhatsApp ↗</a>
+        <p class="note">O botão abre uma mensagem pronta. Confira seus dados e confirme o envio no WhatsApp.</p>
+      </div>
+      <div class="return-bottom"><a class="button dark" href="index.html#inicio">← Voltar à página principal</a></div>
+    </div></section>
+  </main>
+  <footer><div class="wrap footer-row">
+    <span>Programa Clube do Rei Teresópolis • Terê FM 93,7</span>
+    <a href="index.html#inicio">Página principal</a>
+    <a href="https://terefm.com/" target="_blank" rel="noopener">Conheça a Terê FM</a>
+  </div></footer>
+  <script>
+    (() => {
+      const clockTime = document.getElementById('site-clock-time');
+      const clockDate = document.getElementById('site-clock-date');
+      const saoPauloTimeZone = 'America/Sao_Paulo';
+      if (clockTime && clockDate) {
+        const updateClock = () => {
+          const now = new Date();
+          clockTime.textContent = new Intl.DateTimeFormat('pt-BR', { timeZone: saoPauloTimeZone, hour: '2-digit', minute: '2-digit', hourCycle: 'h23' }).format(now);
+          clockDate.textContent = new Intl.DateTimeFormat('pt-BR', { timeZone: saoPauloTimeZone, weekday: 'long', day: '2-digit', month: 'long', year: 'numeric' }).format(now);
+        };
+        updateClock();
+        window.setInterval(updateClock, 30000);
+      }
+    })();
+  </script>
+</body>
+</html>
