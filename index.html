@@ -336,17 +336,22 @@
       background: var(--ink);
       font: 700 14px/1.2 Arial, sans-serif;
       text-decoration: none;
-      transition: background .2s ease, transform .2s ease;
+      transition: background .25s ease, transform .25s ease, box-shadow .25s ease, filter .25s ease;
+      box-shadow: 0 0 0 3px rgba(117, 185, 231, .22), 0 6px 18px rgba(8, 41, 79, .2);
     }
-    .signup-nudge-cta:hover { background: var(--red); transform: translateY(-1px); }
+    .signup-nudge-cta:hover {
+      background: var(--red);
+      transform: translateY(-2px);
+      box-shadow: 0 0 0 5px rgba(117, 185, 231, .3), 0 9px 22px rgba(23, 105, 170, .35);
+    }
     .signup-nudge.is-visible .signup-nudge-cta {
-      animation: signup-cta-attention 1.8s ease-in-out .5s 2;
+      animation: signup-cta-attention 2.2s ease-in-out .25s 3;
     }
     @keyframes signup-cta-attention {
-      0%, 100% { transform: translateY(0); filter: brightness(1); box-shadow: 0 5px 14px rgba(8, 41, 79, .18); }
-      25% { transform: translateY(-3px); filter: brightness(1.14); box-shadow: 0 0 0 5px rgba(117, 185, 231, .2), 0 8px 22px rgba(23, 105, 170, .36); }
-      50% { transform: translateY(0); filter: brightness(1); box-shadow: 0 5px 14px rgba(8, 41, 79, .18); }
-      75% { transform: translateY(-2px); filter: brightness(1.08); box-shadow: 0 0 0 3px rgba(117, 185, 231, .12), 0 7px 18px rgba(23, 105, 170, .28); }
+      0%, 100% { transform: translateY(0); background: var(--ink); filter: brightness(1); box-shadow: 0 0 0 3px rgba(117, 185, 231, .22), 0 6px 18px rgba(8, 41, 79, .2); }
+      25% { transform: translateY(-4px); background: var(--red); filter: brightness(1.08); box-shadow: 0 0 0 6px rgba(117, 185, 231, .32), 0 10px 24px rgba(23, 105, 170, .4); }
+      50% { transform: translateY(0); background: var(--ink); filter: brightness(1); box-shadow: 0 0 0 3px rgba(117, 185, 231, .22), 0 6px 18px rgba(8, 41, 79, .2); }
+      75% { transform: translateY(-3px); background: var(--red); filter: brightness(1.06); box-shadow: 0 0 0 5px rgba(117, 185, 231, .28), 0 9px 22px rgba(23, 105, 170, .34); }
     }
     .signup-nudge-cta:focus-visible, .signup-nudge-close:focus-visible {
       outline: 3px solid var(--gold);
@@ -635,7 +640,7 @@
     (() => {
       const notice = document.getElementById('signup-nudge');
       if (!notice) return;
-      const storageKey = 'clubeReiCadastroAvisoVisto';
+      const storageKey = 'clubeReiCadastroAvisoVisto-v2';
       try {
         if (window.sessionStorage.getItem(storageKey) === '1') return;
         window.sessionStorage.setItem(storageKey, '1');
