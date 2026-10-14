@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Palavras cruzadas do Rei | Programa Clube do Rei</title>
+  <meta name="description" content="Jogue palavras cruzadas sobre as músicas e a trajetória de Roberto Carlos no site do Programa Clube do Rei.">
+  <link rel="canonical" href="https://clubedoreiteresopolis.com.br/palavras-cruzadas.html">
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <style>
+    :root{--ink:#08294f;--paper:#eaf3fb;--cream:#f9fcff;--blue:#1769aa;--sky:#75b9e7;--gold:#d8b66a;--muted:#52677d;--line:rgba(8,41,79,.16);--cell:clamp(22px,7.5vw,32px)}
+    *{box-sizing:border-box}body{margin:0;background:linear-gradient(180deg,#eaf3fb,#f8fbff);color:var(--ink);font-family:Georgia,'Times New Roman',serif;line-height:1.45}
+    .topline{height:7px;background:repeating-linear-gradient(135deg,#2e8bcc 0 12px,var(--ink) 12px 24px,var(--gold) 24px 36px)}
+    .wrap{width:min(940px,calc(100% - 24px));margin:0 auto}header{padding:18px 0 14px;border-bottom:1px solid var(--line)}
+    .brand{display:flex;align-items:center;gap:11px;color:var(--ink);text-decoration:none}.brand-mark{width:42px;height:42px;display:grid;place-items:center;border:3px solid var(--gold);border-radius:50%;background:var(--ink);color:#fff0c3;font-size:23px;box-shadow:0 0 0 3px var(--ink)}
+    .brand-name{font-size:13px;font-weight:bold;letter-spacing:.12em;text-transform:uppercase}.brand-sub{display:block;color:var(--blue);font:700 10px Arial,sans-serif;letter-spacing:.09em}
+    main{padding:22px 0 35px}.tag{display:inline-block;margin-bottom:8px;padding:5px 10px;border:1px solid #d5bb78;border-radius:999px;background:#fff9e9;color:#715a21;font:700 10px Arial,sans-serif;letter-spacing:.08em;text-transform:uppercase}
+    h1{margin:0;font-size:clamp(29px,6vw,44px);line-height:1.08}.intro{max-width:730px;margin:10px 0 18px;color:var(--muted);font-size:16px}
+    .panel{padding:clamp(13px,3vw,24px);border:1px solid var(--line);border-radius:18px;background:rgba(255,255,255,.82);box-shadow:0 16px 38px rgba(8,41,79,.13)}
+    .game-layout{display:grid;grid-template-columns:1fr;gap:18px}.instructions{margin:0 0 16px;padding:12px 16px;border-left:4px solid var(--sky);border-radius:0 10px 10px 0;background:rgba(255,255,255,.82);font:14px/1.45 Arial,sans-serif}.instructions strong{display:block;margin-bottom:4px;color:var(--blue)}.instructions ol{margin:0;padding-left:20px}.instructions li+li{margin-top:3px}.top-tools{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:10px;margin-bottom:14px}
+    .active-clue{flex:1 1 230px;min-height:58px;padding:10px 12px;border-left:4px solid var(--sky);background:#f3f9fe;font:14px/1.35 Arial,sans-serif}.active-clue strong{display:block;margin-bottom:3px;color:var(--blue);font-size:11px;letter-spacing:.06em;text-transform:uppercase}
+    .button-row{display:flex;flex-wrap:wrap;gap:8px}.button{min-height:42px;padding:9px 13px;border:1px solid var(--ink);border-radius:999px;background:var(--ink);color:#fff;font:700 13px Arial,sans-serif;cursor:pointer}.button.alt{background:#fff;color:var(--ink)}.button:hover{filter:brightness(1.12)}
+    .grid-shell{max-width:100%;overflow-x:auto;padding:4px 1px 10px}.grid{display:grid;grid-template-columns:repeat(11,var(--cell));grid-template-rows:repeat(18,var(--cell));gap:1px;width:max-content;margin:0 auto;background:#08294f;border:2px solid #08294f;touch-action:pan-x pan-y}
+    .block{width:var(--cell);height:var(--cell);background:#08294f}.square{position:relative;width:var(--cell);height:var(--cell);background:#fff}.square.active-word{background:#d7edfc}.square.active-cell{z-index:1;outline:3px solid #e1b84b;outline-offset:-3px}.square.correct{background:#ddf3df}.square.wrong{background:#ffe1de}
+    .square input{display:block;width:100%;height:100%;min-width:0;padding:7px 1px 0;border:0;border-radius:0;background:transparent;color:#08294f;text-align:center;text-transform:uppercase;font:700 clamp(13px,4vw,19px) Arial,sans-serif;outline:none;caret-color:transparent}
+    .square input:focus{background:#fff7dc}.cell-number{position:absolute;top:1px;left:2px;z-index:2;color:#52677d;font:700 8px/1 Arial,sans-serif;pointer-events:none}
+    .clue-columns{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-top:18px}.clues{padding:12px;border:1px solid var(--line);border-radius:12px;background:var(--cream)}.clues h2{margin:0 0 8px;font:800 13px Arial,sans-serif;letter-spacing:.06em;text-transform:uppercase}
+    .clue{display:block;width:100%;margin:0;padding:8px 6px;border:0;border-bottom:1px solid var(--line);background:transparent;color:var(--ink);text-align:left;font:13px/1.35 Arial,sans-serif;cursor:pointer}.clue:last-child{border-bottom:0}.clue:hover,.clue.selected{background:#eaf3fb}.clue strong{display:inline-block;min-width:23px;color:var(--blue)}
+    .status{min-height:26px;margin:12px 0 0;color:var(--blue);text-align:center;font:700 14px Arial,sans-serif}.help{margin:11px 0 0;color:var(--muted);text-align:center;font:12px/1.45 Arial,sans-serif}
+    footer{padding:16px 0 22px;border-top:1px solid var(--line);color:var(--muted);font:12px Arial,sans-serif;text-align:center}footer a{color:var(--blue)}
+    @media(max-width:520px){.clue-columns{grid-template-columns:1fr}.top-tools{align-items:stretch}.active-clue{flex-basis:100%}.button-row{justify-content:center}.grid{margin:0 auto}}
+    @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
+  </style>
+</head>
+<body>
+  <div class="topline"></div>
+  <header><div class="wrap"><a class="brand" href="https://clubedoreiteresopolis.com.br/" aria-label="Voltar ao Programa Clube do Rei">
+    <span class="brand-mark" aria-hidden="true">♛</span><span><span class="brand-name">Programa Clube do Rei</span><span class="brand-sub">TERÊ FM 93,7 • TERESÓPOLIS</span></span>
+  </a></div></header>
+  <main class="wrap">
+    <span class="tag">Desafio musical • Roberto Carlos</span>
+    <h1>Palavras cruzadas do Rei</h1>
+    <p class="intro">Uma cruzadinha sobre as músicas e a trajetória de Roberto Carlos, feita para jogar no celular ou no computador.</p>
+    <div class="instructions" aria-label="Instruções para jogar"><strong>Como jogar</strong><ol><li>Escolha uma pista horizontal ou vertical.</li><li>Toque nas casas brancas e digite as letras; para corrigir, digite a letra nova direto na casa.</li><li>Palavras corretas ficam verdes automaticamente; palavras erradas ficam vermelhas.</li></ol></div>
+    <section class="panel" aria-label="Palavras cruzadas">
+      <div class="top-tools">
+        <div class="active-clue" id="active-clue" aria-live="polite"><strong>Pista selecionada</strong>Toque em uma pista para começar.</div>
+        <div class="button-row"><button class="button alt" id="direction" type="button">Alternar: horizontal</button><button class="button alt" id="clear" type="button">Limpar respostas</button></div>
+      </div>
+      <div class="grid-shell"><div class="grid" id="grid" role="group" aria-label="Grade de palavras cruzadas"></div></div>
+      <p class="status" id="status" aria-live="polite">As palavras são conferidas automaticamente enquanto você preenche.</p>
+      <div class="clue-columns"><section class="clues" aria-label="Pistas horizontais"><h2>Horizontais</h2><div id="across-list"></div></section><section class="clues" aria-label="Pistas verticais"><h2>Verticais</h2><div id="down-list"></div></section></div>
+      <p class="help">Em casas que pertencem às duas direções, use “Alternar” para mudar a pista ativa. Não precisa escrever acentos.</p>
+    </section>
+  </main>
+  <footer class="wrap"><a href="https://clubedoreiteresopolis.com.br/">Voltar ao Programa Clube do Rei Teresópolis</a></footer>
+  <script>
+  (()=>{
+    const rows=18, cols=11;
+    const entries=[{"id":"across-3-amigo","number":3,"direction":"across","answer":"AMIGO","clue":"Título de uma canção em que Roberto Carlos homenageia um companheiro.","row":2,"col":6,"cells":[[2,6],[2,7],[2,8],[2,9],[2,10]]},{"id":"down-1-shows","number":1,"direction":"down","answer":"SHOWS","clue":"Apresentações musicais ao vivo, como as do Rei.","row":0,"col":10,"cells":[[0,10],[1,10],[2,10],[3,10],[4,10]]},{"id":"down-2-cachoeiro","number":2,"direction":"down","answer":"CACHOEIRO","clue":"Cidade do Espírito Santo onde Roberto Carlos nasceu.","row":1,"col":6,"cells":[[1,6],[2,6],[3,6],[4,6],[5,6],[6,6],[7,6],[8,6],[9,6]]},{"id":"across-7-cigana","number":7,"direction":"across","answer":"CIGANA","clue":"Complete o título de uma canção do Rei: “A _____”.","row":7,"col":5,"cells":[[7,5],[7,6],[7,7],[7,8],[7,9],[7,10]]},{"id":"down-4-detalhes","number":4,"direction":"down","answer":"DETALHES","clue":"Canção romântica do Rei sobre as lembranças persistentes de um amor.","row":4,"col":8,"cells":[[4,8],[5,8],[6,8],[7,8],[8,8],[9,8],[10,8],[11,8]]},{"id":"down-6-natal","number":6,"direction":"down","answer":"NATAL","clue":"Celebração cristã em 25 de dezembro.","row":6,"col":10,"cells":[[6,10],[7,10],[8,10],[9,10],[10,10]]},{"id":"across-9-baleias","number":9,"direction":"across","answer":"BALEIAS","clue":"Animais homenageados na canção “As _____”.","row":11,"col":2,"cells":[[11,2],[11,3],[11,4],[11,5],[11,6],[11,7],[11,8]]},{"id":"down-10-emocoes","number":10,"direction":"down","answer":"EMOCOES","clue":"Nome de uma canção e de um álbum ao vivo marcante do Rei.","row":11,"col":5,"cells":[[11,5],[12,5],[13,5],[14,5],[15,5],[16,5],[17,5]]},{"id":"across-11-musica","number":11,"direction":"across","answer":"MUSICA","clue":"Arte que reúne sons, ritmo e melodia; está no coração do programa.","row":14,"col":1,"cells":[[14,1],[14,2],[14,3],[14,4],[14,5],[14,6]]},{"id":"across-8-roberto","number":8,"direction":"across","answer":"ROBERTO","clue":"Primeiro nome do Rei.","row":9,"col":0,"cells":[[9,0],[9,1],[9,2],[9,3],[9,4],[9,5],[9,6]]},{"id":"down-8-rosas","number":8,"direction":"down","answer":"ROSAS","clue":"Flores tradicionalmente oferecidas em um gesto romântico.","row":9,"col":0,"cells":[[9,0],[10,0],[11,0],[12,0],[13,0]]},{"id":"across-5-erasmo","number":5,"direction":"across","answer":"ERASMO","clue":"Cantor e compositor, parceiro musical de Roberto Carlos.","row":5,"col":1,"cells":[[5,1],[5,2],[5,3],[5,4],[5,5],[5,6]]}];
+    const occupied=new Map(), numberAt=new Map(), byCell=new Map();
+    for(const e of entries){
+      const start=e.row+','+e.col; numberAt.set(start,e.number);
+      for(const [r,c] of e.cells){const k=r+','+c; if(!occupied.has(k))occupied.set(k,[]); occupied.get(k).push(e.id);}
+    }
+    const grid=document.getElementById('grid'), activeClue=document.getElementById('active-clue'), status=document.getElementById('status');
+    let activeEntry=entries.find(e=>e.direction==='across')||entries[0], activeCell=null, direction='across';
+    const inputs=new Map(), entryButtons=new Map(), acceptedEntries=new Set(), wrongEntries=new Set();
+    for(let r=0;r<rows;r++)for(let c=0;c<cols;c++){
+      const k=r+','+c; const answerEntries=occupied.get(k);
+      if(!answerEntries){const block=document.createElement('span');block.className='block';block.setAttribute('aria-hidden','true');grid.append(block);continue;}
+      const square=document.createElement('label');square.className='square';square.dataset.key=k;
+      if(numberAt.has(k)){const n=document.createElement('span');n.className='cell-number';n.textContent=numberAt.get(k);square.append(n);}
+      const input=document.createElement('input');input.type='text';input.maxLength=1;input.autocomplete='off';input.autocapitalize='characters';input.spellcheck=false;input.inputMode='text';input.dataset.key=k;input.setAttribute('aria-label','Casa '+(numberAt.get(k)||'')+' da cruzadinha');
+      square.append(input);grid.append(square);inputs.set(k,input);
+      input.addEventListener('focus',()=>{if(!input.readOnly)input.select();chooseEntryForCell(k);});
+      input.addEventListener('input',()=>{input.value=(input.value.normalize('NFD').replace(/[̀-ͯ]/g,'').toUpperCase().match(/[A-Z]/)||[''])[0];refreshFeedback();if(input.value)advance(1);});
+      input.addEventListener('keydown',event=>handleKey(event,k));
+    }
+    function ordered(dir){return entries.filter(e=>e.direction===dir).sort((a,b)=>a.number-b.number);}
+    for(const dir of ['across','down']){
+      const container=document.getElementById(dir==='across'?'across-list':'down-list');
+      for(const e of ordered(dir)){
+        const b=document.createElement('button');b.type='button';b.className='clue';b.dataset.entry=e.id;b.innerHTML='<strong>'+e.number+'.</strong> '+e.clue;
+        b.addEventListener('click',()=>{activeEntry=e;direction=dir;activeCell=e.cells[0].join(',');renderActive();focusFirstEmpty(e);});container.append(b);entryButtons.set(e.id,b);
+      }
+    }
+    function chooseEntryForCell(k){
+      activeCell=k;const options=(occupied.get(k)||[]).map(id=>entries.find(e=>e.id===id));
+      activeEntry=options.find(e=>e.direction===direction)||options[0]||activeEntry;direction=activeEntry.direction;renderActive();
+    }
+    function renderActive(){
+      document.getElementById('direction').textContent='Alternar: '+(direction==='across'?'horizontal':'vertical');
+      activeClue.innerHTML='<strong>'+(direction==='across'?'Horizontal':'Vertical')+' • '+activeEntry.number+'</strong>'+activeEntry.clue;
+      for(const input of inputs.values())input.parentElement.classList.remove('active-word','active-cell');
+      for(const [r,c] of activeEntry.cells){const inp=inputs.get(r+','+c);if(inp)inp.parentElement.classList.add('active-word');}
+      if(activeCell&&inputs.has(activeCell))inputs.get(activeCell).parentElement.classList.add('active-cell');
+      for(const e of entries)entryButtons.get(e.id).classList.toggle('selected',e.id===activeEntry.id);
+    }
+    function focusFirstEmpty(e){const cell=e.cells.find(([r,c])=>!inputs.get(r+','+c).value)||e.cells[0];const input=inputs.get(cell.join(','));input.focus();input.scrollIntoView({block:'nearest',inline:'nearest',behavior:'smooth'});}
+    function moveClue(step){const list=ordered(direction),i=list.findIndex(e=>e.id===activeEntry.id);activeEntry=list[(i+step+list.length)%list.length];activeCell=activeEntry.cells[0].join(',');renderActive();focusFirstEmpty(activeEntry);}
+    function advance(step){const cells=activeEntry.cells,i=cells.findIndex(([r,c])=>r+','+c===activeCell);for(let j=i+step;j>=0&&j<cells.length;j+=step){const next=cells[j],key=next.join(','),input=inputs.get(key);if(!input.readOnly){activeCell=key;input.focus();return;}}}
+    function handleKey(event,k){
+      if(event.key==='ArrowRight'||event.key==='ArrowLeft'||event.key==='ArrowDown'||event.key==='ArrowUp'){
+        event.preventDefault();const old=direction;direction=(event.key==='ArrowRight'||event.key==='ArrowLeft')?'across':'down';chooseEntryForCell(k);const dir=event.key==='ArrowRight'||event.key==='ArrowDown'?1:-1;advance(dir);direction=activeEntry.direction;return;
+      }
+      if(event.key==='Backspace'&&!event.target.value){event.preventDefault();advance(-1);const prev=inputs.get(activeCell);if(prev)prev.value='';return;}
+      if(event.key==='Enter'){event.preventDefault();moveClue(1);}
+    }
+    document.getElementById('direction').addEventListener('click',()=>{direction=direction==='across'?'down':'across';chooseEntryForCell(activeCell||activeEntry.cells[0].join(','));});
+    function refreshFeedback(){
+      let newlyAccepted=false;
+      for(const e of entries){
+        const letters=e.cells.map(([r,c])=>inputs.get(r+','+c).value);
+        if(letters.every(Boolean)){
+          if(letters.join('')===e.answer){if(!acceptedEntries.has(e.id))newlyAccepted=true;acceptedEntries.add(e.id);wrongEntries.delete(e.id);}
+          else{wrongEntries.add(e.id);acceptedEntries.delete(e.id);}
+        }
+      }
+      for(const [k,input] of inputs){
+        const linked=occupied.get(k),wrong=linked.some(id=>wrongEntries.has(id)),accepted=linked.some(id=>acceptedEntries.has(id));
+        input.readOnly=linked.some(id=>acceptedEntries.has(id));
+        input.parentElement.classList.remove('correct','wrong');
+        if(wrong)input.parentElement.classList.add('wrong');else if(accepted)input.parentElement.classList.add('correct');
+      }
+      if(entries.every(e=>acceptedEntries.has(e.id)))status.textContent='Parabéns! Você completou a cruzadinha!';
+      else if(newlyAccepted)status.textContent='Palavra correta! Aceita automaticamente.';
+      else if(wrongEntries.size)status.textContent='As palavras erradas ficam vermelhas. Toque numa casa que quer corrigir e digite a letra nova direto.';
+      else status.textContent='As palavras são conferidas automaticamente enquanto você preenche.';
+    }
+    document.getElementById('clear').addEventListener('click',()=>{acceptedEntries.clear();wrongEntries.clear();for(const i of inputs.values()){i.value='';i.readOnly=false;i.parentElement.classList.remove('correct','wrong');}status.textContent='Respostas apagadas. Escolha uma pista para começar de novo.';activeEntry=ordered('across')[0];direction='across';activeCell=activeEntry.cells[0].join(',');renderActive();});
+    renderActive();
+  })();
+  </script>
+</body>
+</html>
