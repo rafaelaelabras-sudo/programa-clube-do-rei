@@ -1,17 +1,18 @@
-<!doctype html>
+<!DOCTYPE html>
+
 <html lang="pt-BR">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Brindes e ganhadores | Programa CLUBE DO REI</title>
-  <meta name="description" content="Confira os brindes dos sorteios do Clube do Rei e veja cada prêmio junto de quem ganhou.">
-  <link rel="canonical" href="https://clubedoreiteresopolis.com.br/sorteio.html">
-  <link rel="icon" type="image/png" href="/favicon.png">
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="Brindes e ganhadores | Programa CLUBE DO REI">
-  <meta property="og:description" content="Brindes e resultados do sorteio do Clube do Rei, organizados juntos por data.">
-  <meta name="theme-color" content="#08294f">
-  <style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Brindes e ganhadores | Programa CLUBE DO REI</title>
+<meta content="Confira os brindes dos sorteios do Clube do Rei e veja cada prêmio junto de quem ganhou." name="description"/>
+<link href="https://clubedoreiteresopolis.com.br/sorteio.html" rel="canonical"/>
+<link href="/favicon.png" rel="icon" type="image/png"/>
+<meta content="website" property="og:type"/>
+<meta content="Brindes e ganhadores | Programa CLUBE DO REI" property="og:title"/>
+<meta content="Brindes e resultados do sorteio do Clube do Rei, organizados juntos por data." property="og:description"/>
+<meta content="#08294f" name="theme-color"/>
+<style>
     :root { --ink:#08294f; --paper:#eaf3fb; --cream:#f9fcff; --gold:#75b9e7; --gold-light:#cbe8fb; --red:#1769aa; --muted:#52677d; --line:rgba(8,41,79,.16); --shadow:0 20px 50px rgba(8,41,79,.16); }
     * { box-sizing:border-box; }
     html { scroll-behavior:smooth; }
@@ -85,113 +86,130 @@
       .quickbar-label { display:none; }
       .quickbar-inner { justify-content:center; }
     }
-  </style>
+  
+    /* Patrocinadores destacados em faixa separada dos ganhadores. */
+    .prize-card { border-top:0; padding:0; overflow:hidden; background:var(--cream); }
+    .prize-card .sponsor-block { padding:15px 18px 12px; background:var(--ink); border-bottom:4px solid var(--gold); }
+    .prize-card .sponsor-label { display:block; color:var(--gold-light); font-family:Arial,sans-serif; font-size:10px; font-weight:800; letter-spacing:.14em; text-transform:uppercase; }
+    .prize-card .sponsor { display:block; margin-top:4px; color:#fff; font-family:Arial,sans-serif; font-size:16px; font-weight:900; letter-spacing:.04em; text-transform:uppercase; }
+    .prize-card .prize-content { padding:18px; }
+    .prize-card .prize-content h3 { margin:0 0 16px; }
+    .prize-card .winner { margin:0; padding:13px 14px; border:1px solid var(--line); border-left:4px solid var(--gold); background:#f2f8fd; }
+    .prize-card .winner-label { color:var(--red); }
+    @media (max-width:760px) { .prize-grid { grid-template-columns:1fr; } }
+</style>
 </head>
 <body>
-  <div class="topline"></div>
-  <header>
-    <div class="wrap nav">
-      <a class="brand" href="index.html#inicio" aria-label="Voltar ao Programa Clube do Rei Teresópolis">
-        <span class="brand-mark">♛</span>
-        <span><span class="brand-name">Programa Clube do Rei</span><span class="brand-sub">Teresópolis • Terê FM</span></span>
-      </a>
-      <div class="site-clock" aria-label="Horário e data atuais em Teresópolis">
-        <span class="site-clock-label">TERESÓPOLIS • RJ</span>
-        <div class="site-clock-reading"><span class="site-clock-icon" aria-hidden="true">🕒</span><time id="site-clock-time">--:--</time></div>
-        <time class="site-clock-date" id="site-clock-date">Carregando data…</time>
-      </div>
-    </div>
-  </header>
-  <div class="quickbar"><div class="wrap quickbar-inner">
-    <a class="button dark" href="index.html#inicio">← Voltar à página principal</a>
-    <span class="quickbar-label">Brindes e ganhadores • Clube do Rei</span>
-  </div></div>
-  <main>
-    <section class="page-hero"><div class="wrap">
-      <div class="eyebrow">Sorteios do Clube do Rei • Terê FM 93,7</div>
-      <h1>Brindes e ganhadores</h1>
-      <p>Confira os prêmios de cada sorteio junto do nome de quem ganhou. Assim fica fácil saber a quem corresponde cada brinde.</p>
-    </div></section>
-    <section class="content"><div class="wrap">
-      <div class="eyebrow" style="color:var(--red)">Arquivo de sorteios</div>
-      <h2 class="section-title">Resultado mais recente.</h2>
-      <p class="section-intro">O sorteio de 18/10/2026 já foi realizado. Os próximos brindes serão anunciados nesta página quando forem confirmados pela produção.</p>
-      <div class="notice"><strong>Próxima edição</strong>Acompanhe o programa para conhecer os novos brindes e o período de participação.</div>       <details class="archive" open>         <summary><span>Domingo, 18 de outubro de 2026</span><span class="archive-count">3 brindes • encerrado</span></summary>         <div class="prize-grid">           <article class="prize-card">             <span class="sponsor">Restaurante e Pizzaria Olício's</span>             <h3>01 GALETO COMPLETO</h3>             <div class="winner"><span class="winner-label">Ganhador</span><strong>Nilzete Veríssimo Pereira</strong><p>Fonte Santa • telefone final #####7711</p></div>           </article>           <article class="prize-card">             <span class="sponsor">Doces Húngaros</span>             <h3>03 BOMBAS DE CHOCOLATE + 01 CAFÉ EXPRESSO</h3>             <div class="winner"><span class="winner-label">Ganhador</span><strong>Lenir da Costa Pires</strong><p>Araras • telefone final #####7565</p></div>           </article>           <article class="prize-card">             <span class="sponsor">Doces Húngaros</span>             <h3>03 EMPADAS DE FRANGO + 01 CAFÉ EXPRESSO</h3>             <div class="winner"><span class="winner-label">Ganhador</span><strong>Rogério Coelho</strong><p>Canoas • telefone final #####7403</p></div>           </article>         </div>       </details>
-      <details class="archive" open>
-        <summary><span>Domingo, 11 de outubro de 2026</span><span class="archive-count">3 brindes • encerrado</span></summary>
-        <div class="prize-grid">
-          <article class="prize-card">
-            <span class="sponsor">Doces Húngaros</span>
-            <h3>03 STRUDELS + 01 SUPER CAFÉ EXPRESSO</h3>
-            <div class="winner"><span class="winner-label">Ganhador</span><strong>Carlito Jacinto de Melo</strong><p>Agriões • telefone final #####7825</p></div>
-          </article>
-          <article class="prize-card">
-            <span class="sponsor">Doces Húngaros</span>
-            <h3>03 EMPADAS DE FRANGO + 01 SUPER CAFÉ EXPRESSO</h3>
-            <div class="winner"><span class="winner-label">Ganhador</span><strong>Fernando Pires</strong><p>Várzea • telefone final #####2735</p></div>
-          </article>
-          <article class="prize-card">
-            <span class="sponsor">Restaurante e Pizzaria Olício's</span>
-            <h3>01 PIZZA DE 40CM + 01 GUARANÁ</h3>
-            <div class="winner"><span class="winner-label">Ganhador</span><strong>Maria Helena Reis Fita</strong><p>Jardim Europa • telefone final #####1101</p></div>
-          </article>
-        </div>
-      </details>
-      <details class="archive" open>
-        <summary><span>Domingo, 4 de outubro de 2026</span><span class="archive-count">3 brindes • encerrado</span></summary>
-        <div class="prize-grid">
-          <article class="prize-card">
-            <span class="sponsor">Doces Húngaros</span>
-            <h3>03 MIL-FOLHAS DE CREME + 01 DELICIOSO CAFÉ EXPRESSO</h3>
-            <div class="winner"><span class="winner-label">Ganhador</span><strong>Bianca Neves</strong><p>Pimenteiras • telefone final #####0173</p></div>
-          </article>
-          <article class="prize-card">
-            <span class="sponsor">Doces Húngaros</span>
-            <h3>03 FOLHADOS DE FRANGO COM CARUPIRI + 01 CAFÉ EXPRESSO</h3>
-            <div class="winner"><span class="winner-label">Ganhador</span><strong>Marli Pinheiro Robeiro</strong><p>Albuquerque • telefone final #####1258</p></div>
-          </article>
-          <article class="prize-card">
-            <span class="sponsor">Restaurante e Pizzaria Olício's</span>
-            <h3>01 GALETO COMPLETO</h3>
-            <div class="winner"><span class="winner-label">Ganhador</span><strong>Simone Pacheco Conceição Cardoso</strong><p>Corta Vento • telefone final #####1849</p></div>
-          </article>
-        </div>
-      </details>
-      <details class="archive" open>
-        <summary><span>Domingo, 27 de setembro de 2026</span><span class="archive-count">3 brindes • encerrado</span></summary>
-        <div class="prize-grid">
-          <article class="prize-card">
-            <span class="sponsor">Doces Húngaros</span>
-            <h3>03 MIL-FOLHAS DE CREME + 01 SUPER CAFÉ EXPRESSO</h3>
-            <div class="winner"><span class="winner-label">Ganhador</span><strong>Simone de Oliveira Cunha</strong><p>Bomsucesso • telefone final #####0452</p></div>
-          </article>
-          <article class="prize-card">
-            <span class="sponsor">Doces Húngaros</span>
-            <h3>03 MARAVILHOSAS EMPADAS DE FRANGO + 01 SUPER CAFÉ EXPRESSO</h3>
-            <div class="winner"><span class="winner-label">Ganhador</span><strong>Edneia Aparecida Coelho Silva</strong><p>Albuquerque • telefone final #####5285</p></div>
-          </article>
-          <article class="prize-card">
-            <span class="sponsor">Restaurante e Pizzaria Olício's</span>
-            <h3>01 PIZZA DE 40CM + 01 GUARANÁ DE 2 LITROS</h3>
-            <div class="winner"><span class="winner-label">Ganhador</span><strong>Lenir Maia de Andrade</strong><p>Meudom • telefone final #####9182</p></div>
-          </article>
-        </div>
-      </details>
-      <div class="raffle-cta">
-        <h3>Estamos esperando a sua participação!</h3>
-        <p>Para concorrer aos próximos brindes, envie seu nome completo, telefone e bairro para a produção. O resultado será divulgado no finalzinho do programa.</p>
-        <a class="button whatsapp" href="https://wa.me/5521967861216?text=Ol%C3%A1%2C%20Clube%20do%20Rei%21%20Quero%20participar%20do%20pr%C3%B3ximo%20sorteio.%0ANome%20completo%3A%20%0ATelefone%3A%20%0ABairro%3A%20" target="_blank" rel="noopener">Enviar meus dados pelo WhatsApp ↗</a>
-        <p class="note">O botão abre uma mensagem pronta. Confira seus dados e confirme o envio no WhatsApp.</p>
-      </div>
-      <div class="return-bottom"><a class="button dark" href="index.html#inicio">← Voltar à página principal</a></div>
-    </div></section>
-  </main>
-  <footer><div class="wrap footer-row">
-    <span>Programa Clube do Rei Teresópolis • Terê FM 93,7</span>
-    <a href="index.html#inicio">Página principal</a>
-    <a href="https://terefm.com/" target="_blank" rel="noopener">Conheça a Terê FM</a>
-  </div></footer>
-  <script>
+<div class="topline"></div>
+<header>
+<div class="wrap nav">
+<a aria-label="Voltar ao Programa Clube do Rei Teresópolis" class="brand" href="index.html#inicio">
+<span class="brand-mark">♛</span>
+<span><span class="brand-name">Programa Clube do Rei</span><span class="brand-sub">Teresópolis • Terê FM</span></span>
+</a>
+<div aria-label="Horário e data atuais em Teresópolis" class="site-clock">
+<span class="site-clock-label">TERESÓPOLIS • RJ</span>
+<div class="site-clock-reading"><span aria-hidden="true" class="site-clock-icon">🕒</span><time id="site-clock-time">--:--</time></div>
+<time class="site-clock-date" id="site-clock-date">Carregando data…</time>
+</div>
+</div>
+</header>
+<div class="quickbar"><div class="wrap quickbar-inner">
+<a class="button dark" href="index.html#inicio">← Voltar à página principal</a>
+<span class="quickbar-label">Brindes e ganhadores • Clube do Rei</span>
+</div></div>
+<main>
+<section class="page-hero"><div class="wrap">
+<div class="eyebrow">Sorteios do Clube do Rei • Terê FM 93,7</div>
+<h1>Brindes e ganhadores</h1>
+<p>Confira os prêmios de cada sorteio junto do nome de quem ganhou. Assim fica fácil saber a quem corresponde cada brinde.</p>
+</div></section>
+<section class="content"><div class="wrap">
+<div class="eyebrow" style="color:var(--red)">Arquivo de sorteios</div>
+<h2 class="section-title">Resultado mais recente</h2>
+<p class="section-intro">O sorteio de 25/10/2026 já foi realizado. Confira cada prêmio, o patrocinador que o ofereceu e o ganhador correspondente.</p>
+<div class="notice"><strong>Próxima edição</strong>Acompanhe o programa para conhecer os novos brindes e o período de participação.</div> <details class="archive" open=""><summary><span>Domingo, 25 de outubro de 2026</span><span class="archive-count">5 brindes • encerrado</span></summary><div class="prize-grid">
+<article class="prize-card"><div class="sponsor-block"><span class="sponsor-label">Patrocinador</span><span class="sponsor">Doces Húngaros</span></div><div class="prize-content"><h3>03 STRUDELS E MAÇÃ + 01 SUPER CAFÉ EXPRESSO</h3><div class="winner"><span class="winner-label">Ganhadora</span><strong>Sheila Carvalho Coutinho</strong><p>Várzea • telefone final 3984</p></div></div></article>
+<article class="prize-card"><div class="sponsor-block"><span class="sponsor-label">Patrocinador</span><span class="sponsor">Doces Húngaros</span></div><div class="prize-content"><h3>03 EMPADAS DE FRANGO + 01 SUPER CAFÉ EXPRESSO</h3><div class="winner"><span class="winner-label">Ganhador</span><strong>Luis Philipe de Faria Pacheco</strong><p>Várzea • telefone final 1373</p></div></div></article>
+<article class="prize-card"><div class="sponsor-block"><span class="sponsor-label">Patrocinador</span><span class="sponsor">Restaurante e Pizzaria Olício's</span></div><div class="prize-content"><h3>01 PIZZA + 01 GUARANÁ</h3><div class="winner"><span class="winner-label">Ganhadora</span><strong>Selma de Freitas</strong><p>Alto • telefone final 3879</p></div></div></article>
+<article class="prize-card"><div class="sponsor-block"><span class="sponsor-label">Patrocinador</span><span class="sponsor">Salão Angelu's</span></div><div class="prize-content"><h3>01 CORTE DE CABELO</h3><div class="winner"><span class="winner-label">Ganhadora</span><strong>Leia Pires</strong><p>Várzea • telefone final 7069</p></div></div></article>
+<article class="prize-card"><div class="sponsor-block"><span class="sponsor-label">Patrocinador</span><span class="sponsor">Salão Angelu's</span></div><div class="prize-content"><h3>01 ESCOVA DE BOTOX SEM FORMOL</h3><div class="winner"><span class="winner-label">Ganhadora</span><strong>Marina Vieira Soares</strong><p>Fonte Santa • telefone final 1936</p></div></div></article>
+</div></details><details class="archive" open=""> <summary><span>Domingo, 18 de outubro de 2026</span><span class="archive-count">3 brindes • encerrado</span></summary> <div class="prize-grid"> <article class="prize-card"> <span class="sponsor">Restaurante e Pizzaria Olício's</span> <h3>01 GALETO COMPLETO</h3> <div class="winner"><span class="winner-label">Ganhador</span><strong>Nilzete Veríssimo Pereira</strong><p>Fonte Santa • telefone final #####7711</p></div> </article> <article class="prize-card"> <span class="sponsor">Doces Húngaros</span> <h3>03 BOMBAS DE CHOCOLATE + 01 CAFÉ EXPRESSO</h3> <div class="winner"><span class="winner-label">Ganhador</span><strong>Lenir da Costa Pires</strong><p>Araras • telefone final #####7565</p></div> </article> <article class="prize-card"> <span class="sponsor">Doces Húngaros</span> <h3>03 EMPADAS DE FRANGO + 01 CAFÉ EXPRESSO</h3> <div class="winner"><span class="winner-label">Ganhador</span><strong>Rogério Coelho</strong><p>Canoas • telefone final #####7403</p></div> </article> </div> </details>
+<details class="archive" open="">
+<summary><span>Domingo, 11 de outubro de 2026</span><span class="archive-count">3 brindes • encerrado</span></summary>
+<div class="prize-grid">
+<article class="prize-card">
+<span class="sponsor">Doces Húngaros</span>
+<h3>03 STRUDELS + 01 SUPER CAFÉ EXPRESSO</h3>
+<div class="winner"><span class="winner-label">Ganhador</span><strong>Carlito Jacinto de Melo</strong><p>Agriões • telefone final #####7825</p></div>
+</article>
+<article class="prize-card">
+<span class="sponsor">Doces Húngaros</span>
+<h3>03 EMPADAS DE FRANGO + 01 SUPER CAFÉ EXPRESSO</h3>
+<div class="winner"><span class="winner-label">Ganhador</span><strong>Fernando Pires</strong><p>Várzea • telefone final #####2735</p></div>
+</article>
+<article class="prize-card">
+<span class="sponsor">Restaurante e Pizzaria Olício's</span>
+<h3>01 PIZZA DE 40CM + 01 GUARANÁ</h3>
+<div class="winner"><span class="winner-label">Ganhador</span><strong>Maria Helena Reis Fita</strong><p>Jardim Europa • telefone final #####1101</p></div>
+</article>
+</div>
+</details>
+<details class="archive" open="">
+<summary><span>Domingo, 4 de outubro de 2026</span><span class="archive-count">3 brindes • encerrado</span></summary>
+<div class="prize-grid">
+<article class="prize-card">
+<span class="sponsor">Doces Húngaros</span>
+<h3>03 MIL-FOLHAS DE CREME + 01 DELICIOSO CAFÉ EXPRESSO</h3>
+<div class="winner"><span class="winner-label">Ganhador</span><strong>Bianca Neves</strong><p>Pimenteiras • telefone final #####0173</p></div>
+</article>
+<article class="prize-card">
+<span class="sponsor">Doces Húngaros</span>
+<h3>03 FOLHADOS DE FRANGO COM CARUPIRI + 01 CAFÉ EXPRESSO</h3>
+<div class="winner"><span class="winner-label">Ganhador</span><strong>Marli Pinheiro Robeiro</strong><p>Albuquerque • telefone final #####1258</p></div>
+</article>
+<article class="prize-card">
+<span class="sponsor">Restaurante e Pizzaria Olício's</span>
+<h3>01 GALETO COMPLETO</h3>
+<div class="winner"><span class="winner-label">Ganhador</span><strong>Simone Pacheco Conceição Cardoso</strong><p>Corta Vento • telefone final #####1849</p></div>
+</article>
+</div>
+</details>
+<details class="archive" open="">
+<summary><span>Domingo, 27 de setembro de 2026</span><span class="archive-count">3 brindes • encerrado</span></summary>
+<div class="prize-grid">
+<article class="prize-card">
+<span class="sponsor">Doces Húngaros</span>
+<h3>03 MIL-FOLHAS DE CREME + 01 SUPER CAFÉ EXPRESSO</h3>
+<div class="winner"><span class="winner-label">Ganhador</span><strong>Simone de Oliveira Cunha</strong><p>Bomsucesso • telefone final #####0452</p></div>
+</article>
+<article class="prize-card">
+<span class="sponsor">Doces Húngaros</span>
+<h3>03 MARAVILHOSAS EMPADAS DE FRANGO + 01 SUPER CAFÉ EXPRESSO</h3>
+<div class="winner"><span class="winner-label">Ganhador</span><strong>Edneia Aparecida Coelho Silva</strong><p>Albuquerque • telefone final #####5285</p></div>
+</article>
+<article class="prize-card">
+<span class="sponsor">Restaurante e Pizzaria Olício's</span>
+<h3>01 PIZZA DE 40CM + 01 GUARANÁ DE 2 LITROS</h3>
+<div class="winner"><span class="winner-label">Ganhador</span><strong>Lenir Maia de Andrade</strong><p>Meudom • telefone final #####9182</p></div>
+</article>
+</div>
+</details>
+<div class="raffle-cta">
+<h3>Estamos esperando a sua participação!</h3>
+<p>Para concorrer aos próximos brindes, envie seu nome completo, telefone e bairro para a produção. O resultado será divulgado no finalzinho do programa.</p>
+<a class="button whatsapp" href="https://wa.me/5521967861216?text=Ol%C3%A1%2C%20Clube%20do%20Rei%21%20Quero%20participar%20do%20pr%C3%B3ximo%20sorteio.%0ANome%20completo%3A%20%0ATelefone%3A%20%0ABairro%3A%20" rel="noopener" target="_blank">Enviar meus dados pelo WhatsApp ↗</a>
+<p class="note">O botão abre uma mensagem pronta. Confira seus dados e confirme o envio no WhatsApp.</p>
+</div>
+<div class="return-bottom"><a class="button dark" href="index.html#inicio">← Voltar à página principal</a></div>
+</div></section>
+</main>
+<footer><div class="wrap footer-row">
+<span>Programa Clube do Rei Teresópolis • Terê FM 93,7</span>
+<a href="index.html#inicio">Página principal</a>
+<a href="https://terefm.com/" rel="noopener" target="_blank">Conheça a Terê FM</a>
+</div></footer>
+<script>
     (() => {
       const clockTime = document.getElementById('site-clock-time');
       const clockDate = document.getElementById('site-clock-date');
