@@ -476,7 +476,7 @@
 <a class="button primary" href="#ao-vivo">Ouvir ao vivo</a>
 <a class="button dark" href="#participar">Pedir uma música</a>
 <a class="button share" href="https://wa.me/?text=Confira%20o%20Programa%20Clube%20do%20Rei%20Teres%C3%B3polis%20na%20Ter%C3%AA%20FM%2093%2C7%3A%20https%3A%2F%2Fclubedoreiteresopolis.com.br%2F" rel="noopener" target="_blank">Compartilhar ↗</a>
-</div><div aria-label="Harpa natalina suave, tocada dentro do site" class="holiday-music"><span aria-hidden="true" class="holiday-music-icon">♫</span><span class="holiday-music-copy"><strong>HARPA NATALINA</strong><span>Harpa suave gerada no site • toque para ouvir ou pausar.</span></span><button aria-label="Tocar harpa natalina de fundo" aria-pressed="false" class="holiday-music-link" id="harp-toggle" type="button">▶ TOCAR</button></div>
+</div><div aria-label="Noite Feliz tocada na harpa dentro do site" class="holiday-music"><span aria-hidden="true" class="holiday-music-icon">♫</span><span class="holiday-music-copy"><strong>NOITE FELIZ NA HARPA</strong><span>Melodia de Noite Feliz • toque para ouvir ou pausar.</span></span><button aria-label="Tocar Noite Feliz na harpa" aria-pressed="false" class="holiday-music-link" id="harp-toggle" type="button">▶ TOCAR</button></div>
 </div>
 <div aria-label="Painel de sintonia do Clube do Rei" class="radio-panel">
 <div class="panel-top"><span>Terê FM • Estúdio 01</span><span class="on-air">No ar</span></div>
@@ -757,14 +757,22 @@
     let timer = null;
     let step = 0;
     let playing = false;
+    // Acompanhamento em dó maior para Noite Feliz (Silent Night).
     const chords = [
-      [261.63, 329.63, 392.00, 493.88], // Cmaj7
-      [196.00, 246.94, 293.66, 392.00], // G
-      [220.00, 261.63, 329.63, 440.00], // Am7
-      [174.61, 220.00, 261.63, 329.63]  // Fmaj7
+      [261.63, 329.63, 392.00, 523.25], // C
+      [196.00, 246.94, 293.66, 349.23], // G7
+      [261.63, 329.63, 392.00, 523.25], // C
+      [174.61, 220.00, 261.63, 349.23], // F
+      [261.63, 329.63, 392.00, 523.25], // C
+      [196.00, 246.94, 293.66, 349.23], // G7
+      [261.63, 329.63, 392.00, 523.25], // C
+      [261.63, 329.63, 392.00, 523.25]  // C
     ];
-    const melody = [523.25,587.33,659.25,587.33,493.88,440.00,392.00,440.00,
-                    523.25,659.25,783.99,659.25,587.33,523.25,493.88,392.00];
+    // Melodia tradicional de Noite Feliz, em dó maior, tocada suavemente.
+    const melody = [392.00,440.00,392.00,329.63, 392.00,440.00,392.00,329.63,
+                    587.33,587.33,493.88,523.25, 523.25,392.00,440.00,392.00,
+                    329.63,440.00,440.00,523.25, 493.88,440.00,392.00,440.00,
+                    392.00,329.63,392.00,440.00, 392.00,329.63,293.66,261.63];
     function pluck(freq, when, volume) {
       const osc = ctx.createOscillator();
       const overtone = ctx.createOscillator();
@@ -792,14 +800,14 @@
       if (!playing || !ctx) return;
       const now = ctx.currentTime + 0.035;
       const chord = chords[Math.floor(step / 4) % chords.length];
-      // Soft, rolling harp arpeggio under a simple original Christmas-like melody.
+      // Arpejo suave de harpa acompanhando a melodia tradicional de Noite Feliz.
       const note = chord[step % 4];
       pluck(note, now, 0.045);
       if (step % 2 === 0) pluck(note * 2, now + 0.045, 0.021);
       pluck(melody[step % melody.length], now + 0.08, 0.032);
       if (step % 4 === 0) pluck(chord[0] / 2, now, 0.034);
       step = (step + 1) % 16;
-      timer = window.setTimeout(playStep, 520);
+      timer = window.setTimeout(playStep, 680);
     }
     async function start() {
       const AudioContextClass = window.AudioContext || window.webkitAudioContext;
